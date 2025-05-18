@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <title>CSS3 Logo</title>
+  <path fill="#1572B6" d="M71 460L30 0h451l-41 460-185 52"/>
+  <path fill="#33A9DC" d="M256 472l149-41 35-394H256"/>
+  <path fill="#FFF" d="M256 208h116l-11 122-105 36v-55l54-18 3-40h-57z"/>
+  <path fill="#EBEBEB" d="M256 265v55l-105-36-7-78h55l3 40 54 19zm-58-120l3 39h55v-39z"/>
+  <path fill="#FFF" d="M256 144h113l5-39H256z"/>
+</svg>

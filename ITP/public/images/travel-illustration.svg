@@ -1,0 +1,66 @@
+<svg width="100%" height="300" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="800" height="500" fill="#ffffff" />
+  
+  <!-- Background elements -->
+  <circle cx="400" cy="250" r="200" fill="#f0f8ff" />
+  
+  <!-- Airplane -->
+  <g transform="translate(350, 250) rotate(-20)">
+    <path d="M-100,-20 L0,0 L-100,20 Z" fill="#0d6efd" />
+    <path d="M0,0 L150,-15 L150,15 Z" fill="#0d6efd" />
+    <path d="M100,-5 L100,5 L130,20 L130,-20 Z" fill="#0d6efd" />
+    <path d="M-30,-3 L-30,3 L-50,30 L-60,30 Z" fill="#0d6efd" />
+    <path d="M-30,-3 L-30,3 L-50,-30 L-60,-30 Z" fill="#0d6efd" />
+  </g>
+  
+  <!-- Clouds -->
+  <g>
+    <circle cx="150" cy="100" r="30" fill="#ffffff" />
+    <circle cx="180" cy="90" r="35" fill="#ffffff" />
+    <circle cx="210" cy="100" r="30" fill="#ffffff" />
+    <circle cx="180" cy="120" r="32" fill="#ffffff" />
+  </g>
+  
+  <g>
+    <circle cx="600" cy="150" r="25" fill="#ffffff" />
+    <circle cx="630" cy="140" r="30" fill="#ffffff" />
+    <circle cx="660" cy="150" r="25" fill="#ffffff" />
+    <circle cx="630" cy="170" r="27" fill="#ffffff" />
+  </g>
+  
+  <!-- Sun -->
+  <circle cx="700" cy="80" r="40" fill="#ffe066" />
+  <g>
+    <line x1="700" y1="10" x2="700" y2="30" stroke="#ffe066" stroke-width="5" />
+    <line x1="700" y1="130" x2="700" y2="150" stroke="#ffe066" stroke-width="5" />
+    <line x1="630" y1="80" x2="650" y2="80" stroke="#ffe066" stroke-width="5" />
+    <line x1="750" y1="80" x2="770" y2="80" stroke="#ffe066" stroke-width="5" />
+    <line x1="642" y1="22" x2="657" y2="37" stroke="#ffe066" stroke-width="5" />
+    <line x1="743" y1="123" x2="758" y2="138" stroke="#ffe066" stroke-width="5" />
+    <line x1="642" y1="138" x2="657" y2="123" stroke="#ffe066" stroke-width="5" />
+    <line x1="743" y1="37" x2="758" y2="22" stroke="#ffe066" stroke-width="5" />
+  </g>
+  
+  <!-- Ground/Map -->
+  <rect x="50" y="350" width="700" height="150" fill="#e9ecef" rx="10" ry="10" />
+  <path d="M100,400 Q400,320 700,400" stroke="#0d6efd" stroke-width="3" fill="none" />
+  <path d="M100,420 Q400,500 700,420" stroke="#0d6efd" stroke-width="3" fill="none" />
+  
+  <!-- Map pins -->
+  <g>
+    <circle cx="200" cy="380" r="10" fill="#dc3545" />
+    <path d="M200,380 L200,350" stroke="#dc3545" stroke-width="3" />
+  </g>
+  <g>
+    <circle cx="400" cy="400" r="10" fill="#dc3545" />
+    <path d="M400,400 L400,370" stroke="#dc3545" stroke-width="3" />
+  </g>
+  <g>
+    <circle cx="600" cy="380" r="10" fill="#dc3545" />
+    <path d="M600,380 L600,350" stroke="#dc3545" stroke-width="3" />
+  </g>
+  
+  <!-- Dashed lines connecting pins -->
+  <path d="M200,380 L400,400 L600,380" stroke="#6c757d" stroke-width="2" stroke-dasharray="5,5" fill="none" />
+  
+</svg>

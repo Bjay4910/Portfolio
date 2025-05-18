@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="400" height="200" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M30 80L70 120L30 160" stroke="#4f46e5" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M130 40L170 160" stroke="#4f46e5" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M230 80L190 120L230 160" stroke="#4f46e5" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M280 140L340 140" stroke="#4f46e5" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M350 40H390V60H350V40Z" fill="#4f46e5"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M10 40H50V60H10V40Z" fill="#4f46e5"/>
+</svg>

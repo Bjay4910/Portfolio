@@ -1,0 +1,103 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f8f9fa;
+  }
+  
+  /* Hero section styles */
+  .hero {
+    background: linear-gradient(135deg, #0a58ca 0%, #0dcaf0 100%);
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+  }
+  
+  /* Step indicator */
+  .step-circle {
+    width: 40px;
+    height: 40px;
+    background-color: #0d6efd;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-weight: bold;
+  }
+  
+  /* Timeline styling */
+  .timeline {
+    position: relative;
+    padding: 20px 0;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 20px;
+    width: 2px;
+    background-color: #dee2e6;
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+    padding-left: 60px;
+  }
+  
+  .timeline-badge {
+    position: absolute;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .timeline-content {
+    padding: 10px 0;
+  }
+  
+  /* Weather badge */
+  .weather-badge {
+    background-color: #f8f9fa;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    display: inline-block;
+  }
+  
+  /* Card hover effects */
+  .card {
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Interest badges */
+  .interest-badge {
+    transition: all 0.2s;
+  }
+  
+  .interest-badge:hover {
+    background-color: #e9ecef;
+  }
+  
+  /* Budget options */
+  .budget-option {
+    transition: all 0.2s;
+  }
+  
+  .budget-option:hover {
+    background-color: #e9ecef;
+  }
