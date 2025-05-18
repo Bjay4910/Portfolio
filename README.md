@@ -30,4 +30,4 @@ Visit my portfolio at: [https://bjay4910.github.io/Portfolio/](https://bjay4910.
 
 ## Contact
 
-Feel free to reach out to me at jamesgyampoh560@gmail.com for any inquiries or opportunities.
+Feel free to reach out to me at james.b.gyampoh@gmail.com for any inquiries or opportunities.
