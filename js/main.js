@@ -214,7 +214,7 @@ const observeCountUp = new IntersectionObserver(
                         if (!startTime) startTime = timestamp;
                         const progress = Math.min((timestamp - startTime) / duration, 1);
                         const currentValue = progress * value;
-                        element.textContent = value % 1 === 0 ? Math.floor(currentValue) : currentValue.toFixed(1);
+                        element.textContent = value % 1 === 0 ? Math.floor(currentValue) : currentValue.toFixed(2);
                         if (progress < 1) {
                             window.requestAnimationFrame(step);
                         }
