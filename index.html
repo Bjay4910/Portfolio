@@ -3,537 +3,445 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>James Gyampoh - Portfolio</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <title>Barnabas James Gyampoh - Developer Portfolio</title>
+    <meta name="description" content="Barnabas James Gyampoh - Computer Science &amp; Applied Mathematics student building agentic AI and systems projects">
+    <meta name="author" content="Barnabas James Gyampoh">
+    <meta name="theme-color" content="#0b0e14">
+    <link rel="canonical" href="https://bjay4910.github.io/Portfolio/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bjay4910.github.io/Portfolio/">
+    <meta property="og:title" content="Barnabas James Gyampoh - Developer Portfolio">
+    <meta property="og:description" content="Barnabas James Gyampoh - Computer Science &amp; Applied Mathematics student building agentic AI and systems projects">
+    <meta property="og:site_name" content="Barnabas James Gyampoh">
+
+    <!-- Twitter card (no account linked) -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Barnabas James Gyampoh - Developer Portfolio">
+    <meta name="twitter:description" content="Barnabas James Gyampoh - Computer Science &amp; Applied Mathematics student building agentic AI and systems projects">
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0e14'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='system-ui,-apple-system,Segoe UI,Roboto,sans-serif' font-size='28' font-weight='700' fill='%235eead4'%3EBG%3C/text%3E%3C/svg%3E">
     <link rel="stylesheet" href="css/styles.css">
-    <script src="https://unpkg.com/three@0.132.2/build/three.min.js"></script>
-    <script src="https://unpkg.com/framer-motion@10.12.16/dist/framer-motion.js"></script>
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
-    <!-- Hire Me Blinker -->
-    <div class="hire-me-container">
-        <div class="hire-me-blinker">
-            <div class="hire-me-text">Hire me</div>
-        </div>
-    </div>
-    <!-- Header -->
-    <header id="header">
-        <div class="container">
-            <nav class="navbar">
-                <a href="#home" class="logo">Portfolio</a>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-                <div class="nav-links" id="navLinks">
-                    <a href="#home" class="nav-link active">Home</a>
-                    <a href="#about" class="nav-link">About</a>
-                    <a href="#tech-stack" class="nav-link">Tech Stack</a>
-                    <a href="#experience" class="nav-link">Experience</a>
-                    <a href="#projects" class="nav-link">Projects</a>
-                    <a href="#education" class="nav-link">Education</a>
-                    <a href="#awards" class="nav-link">Awards</a>
-                    <a href="#contact" class="nav-link">Contact</a>
-                </div>
-
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </nav>
-        </div>
+    <header class="site-header" id="top">
+        <nav class="nav container" aria-label="Primary">
+            <a href="#home" class="nav-logo" aria-label="Barnabas James Gyampoh, back to top">BG<span class="nav-logo-dot">.</span></a>
+            <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">
+                <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#leadership" class="nav-link">Leadership</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div id="hero-background"></div>
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text fade-in">
-                    <h3 class="hero-greeting">Hello I'm</h3>
-                    <h1 class="hero-name typewriter">James</h1>
-                    <h2 class="hero-position">Computer Science Student & Developer</h2>
-                    <p class="hero-description">Passionate about full-stack development, distributed systems, and AI applications. Currently pursuing a B.S. in Computer Science and Applied Mathematics at Thomas College.</p>
+    <main id="main">
+        <!-- Hero -->
+        <section id="home" class="hero" aria-labelledby="hero-title">
+            <div class="container hero-grid">
+                <div class="hero-text">
+                    <p class="eyebrow">Hi, I'm James</p>
+                    <h1 id="hero-title" class="hero-name">Barnabas James Gyampoh</h1>
+                    <p class="hero-title">Computer Science &amp; Applied Mathematics student and developer.</p>
+                    <p class="hero-lede">Graduating December 2026. Open to software engineering, AI/agentic systems and systems roles.</p>
 
-                    <div class="hero-buttons">
-                        <a href="#contact" class="btn btn-3d">Contact Me</a>
-                        <a href="#projects" class="btn btn-secondary btn-3d">View My Work</a>
-                    </div>
+                    <ul class="hero-facts" aria-label="Quick facts">
+                        <li><span class="fact-value">3.94</span><span class="fact-label">GPA</span></li>
+                        <li><span class="fact-value">Dec 2026</span><span class="fact-label">Graduation</span></li>
+                        <li><span class="fact-value">5</span><span class="fact-label">Featured projects</span></li>
+                    </ul>
 
-                    <div class="hero-socials">
-                        <a href="https://github.com/Bjay4910" class="social-icon"><img src="images/social/github.svg" alt="GitHub" class="social-svg"></a>
-                        <a href="http://www.linkedin.com/in/james-gyampoh-39849b2b1" class="social-icon"><img src="images/social/linkedin.svg" alt="LinkedIn" class="social-svg"></a>
-                        <a href="#" class="social-icon"><img src="images/social/twitter.svg" alt="Twitter" class="social-svg"></a>
-                        <a href="#" class="social-icon"><img src="images/social/instagram.svg" alt="Instagram" class="social-svg"></a>
-                    </div>
-                </div>
-
-                <div class="hero-image fade-in">
-                    <div class="profile-img-container">
-                        <img src="images/profilepic.png" alt="Profile Image" class="profile-img">
-                        <div class="profile-img-backdrop"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <div class="mouse">
-                <div class="wheel"></div>
-            </div>
-            <div>
-                <span class="scroll-arrow"></span>
-                <span class="scroll-arrow"></span>
-                <span class="scroll-arrow"></span>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about section">
-        <div class="container">
-            <h2 class="section-title fade-in">About Me</h2>
-
-            <div class="about-content">
-                <div class="about-text fade-in">
-                    <p>I'm a dedicated Computer Science & Applied Mathematics student at Thomas College, with a passion for software engineering and innovative technology solutions. My academic journey has equipped me with a solid foundation in object-oriented programming, systems engineering, and data structures.</p>
-
-                    <p>With a 3.94 GPA and recognition on the Dean's List, I strive for excellence in every project I undertake. My experience as a Software Engineer Intern at the Maine Department of Transportation has provided me valuable real-world experience leading technical migrations and developing automated workflows.</p>
-
-                    <p>I'm particularly interested in full-stack development, distributed systems architecture, and AI/ML applications. I enjoy tackling complex problems and creating efficient, user-friendly solutions.</p>
-
-                    <div class="stats">
-                        <div class="stat-item">
-                            <h3 class="stat-number count-up">3.94</h3>
-                            <p class="stat-title">Cumulative GPA</p>
-                        </div>
-
-                        <div class="stat-item">
-                            <h3 class="stat-number count-up">7</h3>
-                            <p class="stat-title">Programming Languages</p>
-                        </div>
-
-                        <div class="stat-item">
-                            <h3 class="stat-number count-up">5+</h3>
-                            <p class="stat-title">Major Projects</p>
-                        </div>
-
-                        <div class="stat-item">
-                            <h3 class="stat-number count-up">2</h3>
-                            <p class="stat-title">Awards</p>
-                        </div>
-                    </div>
-
-                    <a href="docs/James_Gyampoh Resume .pdf" class="btn btn-3d" style="margin-top: 2rem;" target="_blank">View Resume</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tech Stack Section -->
-    <section id="tech-stack" class="tech-stack-section section">
-        <div class="tech-stack-background">
-            <img src="images/decorative/blob-shape.svg" alt="Blob Shape" class="blob-shape blob1">
-            <img src="images/decorative/blob-shape.svg" alt="Blob Shape" class="blob-shape blob2">
-            <img src="images/decorative/geometric-pattern.svg" alt="Geometric Pattern" class="geometric-pattern">
-        </div>
-        <div class="container">
-            <div class="tech-stack-heading">
-                <h2 class="section-title fade-in">Technologies I Work With</h2>
-                <p class="fade-in">An interactive showcase of the technologies, frameworks, and tools I use in my projects.</p>
-                <img src="images/decorative/code-pattern.svg" alt="Code Pattern" class="code-pattern">
-            </div>
-
-            <div id="tech-stack-container" class="tech-stack-container fade-in">
-                <!-- Tech stack cards will be dynamically inserted here by JavaScript -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="experience section">
-        <div class="container">
-            <h2 class="section-title fade-in">Experience</h2>
-
-            <div class="experience-wrapper">
-                <div class="experience-item fade-in">
-                    <div class="experience-timeline">
-                        <div class="experience-date">2025</div>
-                    </div>
-
-                    <div class="experience-content">
-                        <div class="experience-card">
-                            <div class="experience-header">
-                                <h3 class="experience-title">Software Engineer Intern</h3>
-                                <p class="experience-company">Maine Department of Transportation, Augusta, ME</p>
-                                <p class="experience-period">May 2025 - August 2025</p>
-                            </div>
-
-                            <div class="experience-description">
-                                <p>• Led SharePoint migration, implemented metadata architecture and rebuilt legacy systems with 5+ stakeholder input</p>
-                                <p>• Designed Power Automate Workflows automating critical department processes, improving efficiency by 5%</p>
-                                <p>• Developed technical training for staff, including SharePoint workshops and presentations on government AI implementation</p>
-                            </div>
-                        </div>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">Projects</a>
+                        <a href="assets/Barnabas_Gyampoh_Resume_Full.pdf" class="btn btn-ghost" target="_blank" rel="noopener">Resume</a>
+                        <a href="https://github.com/Bjay4910" class="btn btn-ghost" target="_blank" rel="noopener">GitHub</a>
+                        <a href="https://www.linkedin.com/in/james-gyampoh-39849b2b1/" class="btn btn-ghost" target="_blank" rel="noopener">LinkedIn</a>
                     </div>
                 </div>
 
-                <div class="experience-item fade-in">
-                    <div class="experience-timeline">
-                        <div class="experience-date">2024</div>
-                    </div>
-
-                    <div class="experience-content">
-                        <div class="experience-card">
-                            <div class="experience-header">
-                                <h3 class="experience-title">Team Participant</h3>
-                                <p class="experience-company">HackMIT, Cambridge, MA</p>
-                                <p class="experience-period">September 2024</p>
-                            </div>
-
-                            <div class="experience-description">
-                                <p>• Developed a 95%-accurate AI face recognition attendance system with a team of 4 using YOLOv5, OpenCV, React, Flask, and MongoDB</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="experience-item fade-in">
-                    <div class="experience-timeline">
-                        <div class="experience-date">2024</div>
-                    </div>
-
-                    <div class="experience-content">
-                        <div class="experience-card">
-                            <div class="experience-header">
-                                <h3 class="experience-title">Mentor & Tutor</h3>
-                                <p class="experience-company">Mckenzie High School Coding Club</p>
-                                <p class="experience-period">January 2024 - May 2024</p>
-                            </div>
-
-                            <div class="experience-description">
-                                <p>• Developed Python Turtle and Finch Robot curriculum for 15 middle school students, introducing core CS concepts through hands-on projects</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="hero-photo">
+                    <img src="images/profile-560.jpg" width="560" height="809" alt="Portrait of Barnabas James Gyampoh" fetchpriority="high">
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects section">
-        <div class="section-background-alt"></div>
-        <div class="container">
-            <h2 class="section-title fade-in">Projects</h2>
+        <!-- About -->
+        <section id="about" class="section" aria-labelledby="about-title">
+            <div class="container">
+                <h2 id="about-title" class="section-title reveal"><span class="section-kicker">01</span>About</h2>
+                <div class="about-grid">
+                    <div class="about-text reveal">
+                        <p>I'm a Computer Science &amp; Applied Mathematics student at Thomas College in Waterville, Maine, graduating in December 2026. I build full-stack products, infrastructure tooling and agentic AI systems, and I care about measuring what I ship.</p>
+                        <p>I co-founded the web agency Orductive, and I interned as a software engineer at the Maine Department of Transportation. My interests are full-stack development, distributed systems architecture, cloud infrastructure, agentic AI, AI/ML applications and computer vision.</p>
+                        <a href="assets/Barnabas_Gyampoh_Resume_Full.pdf" class="btn btn-ghost" target="_blank" rel="noopener">View Resume</a>
+                    </div>
+                    <ul class="stats reveal" aria-label="At a glance">
+                        <li class="stat"><span class="stat-number">3.94</span><span class="stat-label">Cumulative GPA</span></li>
+                        <li class="stat"><span class="stat-number">8</span><span class="stat-label">Programming languages</span></li>
+                        <li class="stat"><span class="stat-number">5</span><span class="stat-label">Featured projects</span></li>
+                        <li class="stat"><span class="stat-number">4</span><span class="stat-label">Awards &amp; honors</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-            <div class="projects-grid">
-                <div class="project-item fade-in">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://via.placeholder.com/600x400" alt="Intelligent Travel Planner">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="https://bjay4910.github.io/ITP/" class="btn btn-secondary btn-3d">Live Demo</a>
-                                    <a href="https://github.com/Bjay4910/ITP" class="btn btn-secondary btn-3d">GitHub</a>
+        <!-- Experience -->
+        <section id="experience" class="section section-alt" aria-labelledby="experience-title">
+            <div class="container">
+                <h2 id="experience-title" class="section-title reveal"><span class="section-kicker">02</span>Experience</h2>
+                <ol class="timeline">
+                    <li class="timeline-item reveal">
+                        <div class="timeline-year">2026 - Now</div>
+                        <article class="card timeline-card">
+                            <header class="timeline-head">
+                                <div>
+                                    <h3 class="card-title">Co-Founder · Orductive</h3>
+                                    <p class="meta">Jan 2026 - Present · Remote</p>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="project-content">
-                            <h3 class="project-title">Intelligent Travel Planner</h3>
-
-                            <div class="project-tags">
-                                <span class="project-tag">React</span>
-                                <span class="project-tag">Bootstrap</span>
-                                <span class="project-tag">Context API</span>
-                            </div>
-
-                            <p class="project-description">Developed an AI-powered travel planning application that optimizes trip itineraries based on weather forecasts, budget considerations, and personalized interests. Features include weather-optimized scheduling, budget-friendly recommendations, and personalized activity suggestions. Built with React and Bootstrap for responsive design.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-item fade-in">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://via.placeholder.com/600x400" alt="Customer Relationship Analytics Platform">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="#" class="btn btn-secondary btn-3d">View Project</a>
-                                    <a href="https://github.com/Bjay4910/crm" class="btn btn-secondary btn-3d">GitHub</a>
+                            </header>
+                            <ul class="chips" aria-label="Technologies">
+                                <li>React</li><li>TypeScript</li><li>GSAP</li><li>Supabase</li><li>Netlify</li>
+                            </ul>
+                            <ul class="bullets">
+                                <li>Co-founded a web agency delivering sites for <strong>5+</strong> paying clients, owning full lifecycle from architecture to production.</li>
+                                <li>Built a reusable component system; Netlify CI/CD cut delivery time <strong>40%</strong> vs. manual deploys, with <strong>95+</strong> Lighthouse scores.</li>
+                                <li>Automated client workflows with Supabase and third-party APIs, eliminating <strong>10+</strong> hours/week of manual client operations.</li>
+                            </ul>
+                        </article>
+                    </li>
+                    <li class="timeline-item reveal">
+                        <div class="timeline-year">2025</div>
+                        <article class="card timeline-card">
+                            <header class="timeline-head">
+                                <div>
+                                    <h3 class="card-title">Software Engineer Intern · Maine Department of Transportation</h3>
+                                    <p class="meta">May 2025 - Aug 2025 · Augusta, ME</p>
                                 </div>
+                            </header>
+                            <ul class="chips" aria-label="Technologies">
+                                <li>C#</li><li>TypeScript</li><li>Power FX</li><li>PowerShell</li><li>Power BI</li>
+                            </ul>
+                            <ul class="bullets">
+                                <li>Led SharePoint migration, implemented metadata architecture and rebuilt legacy systems with <strong>5+</strong> stakeholder input.</li>
+                                <li>Designed Power Automate Workflows automating critical department processes, improving efficiency by <strong>5%</strong> vs. manual steps.</li>
+                                <li>Developed technical training for staff, including SharePoint workshops and presentations on government AI implementation.</li>
+                            </ul>
+                        </article>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="section" aria-labelledby="projects-title">
+            <div class="container">
+                <h2 id="projects-title" class="section-title reveal"><span class="section-kicker">03</span>Featured Projects</h2>
+
+                <div class="projects-grid">
+                    <!-- 1. Agent-Aware Power Manager -->
+                    <article class="card project reveal">
+                        <div class="project-visual" role="img" aria-label="Agent-Aware Power Manager: illustration of a moon and battery">
+                            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M30 8a14 14 0 1 0 10 24A16 16 0 0 1 30 8z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><rect x="8" y="34" width="18" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="2.5"/><rect x="11" y="37" width="5" height="2" fill="currentColor"/><path d="M28 37v2" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+                            <span class="project-visual-name">Agent-Aware Power Manager</span>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="card-title">Agent-Aware Power Manager</h3>
+                            <p class="project-sub">Sleep Control for AI Agents</p>
+                            <ul class="chips" aria-label="Technologies">
+                                <li>Python</li><li>rumps</li><li>psutil</li><li>macOS</li>
+                            </ul>
+                            <ul class="bullets">
+                                <li>Built a menubar app that blocks sleep only while agents work, with a <strong>2-hour</strong> cap and <strong>25%</strong> battery floor.</li>
+                                <li>Scoped admin access to <strong>1</strong> sudoers rule for pmset, so the app never needs full root privileges.</li>
+                                <li>Validated on real hardware with a logged hold-and-release run, plus <strong>141</strong> automated tests.</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/Bjay4910/agent-aware-power-manager" class="btn btn-small" target="_blank" rel="noopener">GitHub<span class="visually-hidden"> repository for Agent-Aware Power Manager</span></a>
                             </div>
                         </div>
+                    </article>
 
-                        <div class="project-content">
-                            <h3 class="project-title">Customer Relationship Analytics Platform</h3>
-
-                            <div class="project-tags">
-                                <span class="project-tag">React</span>
-                                <span class="project-tag">Spring Boot</span>
-                                <span class="project-tag">SQL</span>
-                                <span class="project-tag">REST API</span>
-                            </div>
-
-                            <p class="project-description">Built a full-stack CRM with optimized SQL database and interactive sales analytics dashboard. Implemented secure REST API with Spring Security and responsive React frontend. Applied OOP design patterns creating maintainable architecture with 90% test coverage.</p>
+                    <!-- 2. Multi-Agent Memory Hub -->
+                    <article class="card project reveal">
+                        <div class="project-visual" role="img" aria-label="Multi-Agent Memory Hub: illustration of connected graph nodes">
+                            <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="5" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="10" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="38" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="24" cy="41" r="4" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M13 15l7 6M35 15l-7 6M24 29v8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+                            <span class="project-visual-name">Multi-Agent Memory Hub</span>
                         </div>
-                    </div>
+                        <div class="project-body">
+                            <h3 class="card-title">Multi-Agent Memory Hub</h3>
+                            <p class="project-sub">Shared Memory for AI Agents</p>
+                            <ul class="chips" aria-label="Technologies">
+                                <li>Python</li><li>SQLite</li><li>MCP</li><li>Ollama</li>
+                            </ul>
+                            <ul class="bullets">
+                                <li>Built a SQLite graph memory with an MCP server so <strong>3</strong> agents (Claude, Gemini, Hermes) share recall.</li>
+                                <li>Engineered a pre-storage secret filter with <strong>50</strong> tested forms and <strong>0</strong> leaks across <strong>100K+</strong> fuzz combinations.</li>
+                                <li>Scored extraction at <strong>0.85 / 0.75 / 0.84</strong> F1 on <strong>3</strong> sets, backed by <strong>1,217</strong> tests and <strong>6</strong> independent reviews.</li>
+                            </ul>
+                            <p class="note">The 0 leaks apply to the tested forms; known gaps are documented in the repository.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/Bjay4910/multi-agent-memory-hub" class="btn btn-small" target="_blank" rel="noopener">GitHub<span class="visually-hidden"> repository for Multi-Agent Memory Hub</span></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 3. Lyra -->
+                    <article class="card project reveal">
+                        <div class="project-visual" role="img" aria-label="Lyra: illustration of a layered tensor cube">
+                            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6l16 9v18l-16 9-16-9V15z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M8 15l16 9 16-9M24 24v18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M16 19.5v18M32 19.5v18" stroke="currentColor" stroke-width="1.5" opacity=".6"/></svg>
+                            <span class="project-visual-name">Lyra</span>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="card-title">Lyra</h3>
+                            <p class="project-sub">A Minimal Tensor Inference Engine</p>
+                            <ul class="chips" aria-label="Technologies">
+                                <li>C++17</li><li>CMake</li><li>ONNX</li><li>Protobuf</li><li>PyTorch</li>
+                            </ul>
+                            <ul class="bullets">
+                                <li>Built a C++ tensor inference engine from scratch that runs MobileNetV2 with no ML framework at runtime.</li>
+                                <li>Sped up MobileNetV2 inference <strong>11.4x</strong> (<strong>467</strong> to <strong>41 ms</strong>, same -O3 build) by replacing naive Conv2D with im2col/GEMM.</li>
+                                <li>Matched PyTorch's top-1 on <strong>50/50</strong> ImageNet images with <strong>2.6e-5</strong> max output error.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- 4. Vigil -->
+                    <article class="card project reveal">
+                        <div class="project-visual" role="img" aria-label="Vigil: illustration of a monitoring pulse line">
+                            <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="5" y="9" width="38" height="28" rx="4" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M10 25h7l3-8 5 14 3-6h10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 43h12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+                            <span class="project-visual-name">Vigil</span>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="card-title">Vigil</h3>
+                            <p class="project-sub">Observability Platform</p>
+                            <ul class="chips" aria-label="Technologies">
+                                <li>TypeScript</li><li>Python</li><li>FastAPI</li><li>Docker</li><li>Fly.io</li><li>GitHub Actions</li>
+                            </ul>
+                            <ul class="bullets">
+                                <li>Built a TypeScript SDK and Python time-series store benchmarked at <strong>60,000</strong> points/s on synthetic data.</li>
+                                <li>Deployed on Fly.io with Docker and CI, monitoring <strong>3</strong> production client sites every <strong>5 min</strong> with Discord alerts.</li>
+                                <li>Co-built z-score, EWMA, and up/down outage detection (<strong>92-94%</strong> precision, synthetic backtest) behind <strong>200+</strong> tests.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- 5. SyncScript -->
+                    <article class="card project reveal">
+                        <div class="project-visual" role="img" aria-label="SyncScript: illustration of code brackets with sync arrows">
+                            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M16 14l-9 10 9 10M32 14l9 10-9 10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 20a6 6 0 0 1 10 1M28 28a6 6 0 0 1-10-1" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M30 17v4h-4M18 31v-4h4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <span class="project-visual-name">SyncScript</span>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="card-title">SyncScript</h3>
+                            <p class="project-sub">Real-Time Collaborative Code Editor</p>
+                            <ul class="chips" aria-label="Technologies">
+                                <li>Yjs</li><li>CRDT</li><li>WebSocket</li><li>Node.js</li><li>React</li><li>IndexedDB</li>
+                            </ul>
+                            <ul class="bullets">
+                                <li>Built a real-time collaborative text editor syncing <strong>7+</strong> active users via Yjs CRDTs over a custom Websocket relay.</li>
+                                <li>Engineered offline-first sync using IndexedDB and Yjs state-vector diffing, sending only missing deltas.</li>
+                                <li>Deployed backend on Render and frontend on Vercel, with cold start detection for Render's <strong>30-50s</strong> wake.</li>
+                            </ul>
+                        </div>
+                    </article>
                 </div>
 
-                <div class="project-item fade-in">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://via.placeholder.com/600x400" alt="StudyFlow App">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="https://studyflow-e54f0ac174a7.herokuapp.com/" class="btn btn-secondary btn-3d">Live Demo</a>
-                                    <a href="https://github.com/Bjay4910/StudyFlow" class="btn btn-secondary btn-3d">GitHub</a>
-                                </div>
-                            </div>
-                        </div>
+                <!-- More projects -->
+                <h3 class="subsection-title reveal">More projects</h3>
+                <ul class="more-projects reveal">
+                    <li class="mini">
+                        <h4 class="mini-title">Intelligent Travel Planner</h4>
+                        <p>Travel planning app that builds itineraries around weather forecasts, budget and personal interests.</p>
+                        <p class="mini-stack">React · Bootstrap · Context API</p>
+                        <p class="mini-links">
+                            <a href="https://bjay4910.github.io/ITP/" target="_blank" rel="noopener">Live demo<span class="visually-hidden"> of Intelligent Travel Planner</span></a>
+                            <a href="https://github.com/Bjay4910/ITP" target="_blank" rel="noopener">GitHub<span class="visually-hidden"> repository for Intelligent Travel Planner</span></a>
+                        </p>
+                    </li>
+                    <li class="mini">
+                        <h4 class="mini-title">Customer Relationship Analytics Platform</h4>
+                        <p>Full-stack CRM with a SQL database, a sales analytics dashboard and a REST API secured with Spring Security.</p>
+                        <p class="mini-stack">React · Spring Boot · SQL · REST API</p>
+                        <p class="mini-links">
+                            <a href="https://github.com/Bjay4910/crm" target="_blank" rel="noopener">GitHub<span class="visually-hidden"> repository for Customer Relationship Analytics Platform</span></a>
+                        </p>
+                    </li>
+                    <li class="mini">
+                        <h4 class="mini-title">StudyFlow</h4>
+                        <p>Flask app that uses Anthropic's Claude API to build personalized study plans and manage student workload.</p>
+                        <p class="mini-stack">Flask · Bootstrap · Claude API · Heroku</p>
+                        <p class="mini-links">
+                            <a href="https://github.com/Bjay4910/StudyFlow" target="_blank" rel="noopener">GitHub<span class="visually-hidden"> repository for StudyFlow</span></a>
+                        </p>
+                    </li>
+                    <li class="mini">
+                        <h4 class="mini-title">API Integration Dashboard</h4>
+                        <p>Custom dashboard that brings weather, stock and social media APIs into one interface, with data caching.</p>
+                        <p class="mini-stack">JavaScript · React · REST APIs</p>
+                        <p class="mini-links">
+                            <a href="https://github.com/Bjay4910/API-" target="_blank" rel="noopener">GitHub<span class="visually-hidden"> repository for API Integration Dashboard</span></a>
+                        </p>
+                    </li>
+                    <li class="mini">
+                        <h4 class="mini-title">Edu Earn</h4>
+                        <p>Cross-platform app connecting students with employment opportunities, built with the BLoC pattern and Firebase.</p>
+                        <p class="mini-stack">Flutter · Dart · Firebase</p>
+                        <p class="mini-links">
+                            <a href="https://github.com/Bjay4910/Edu-Earn" target="_blank" rel="noopener">GitHub<span class="visually-hidden"> repository for Edu Earn</span></a>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
-                        <div class="project-content">
-                            <h3 class="project-title">StudyFlow App</h3>
-
-                            <div class="project-tags">
-                                <span class="project-tag">Flask</span>
-                                <span class="project-tag">Bootstrap</span>
-                                <span class="project-tag">Claude API</span>
-                                <span class="project-tag">Heroku</span>
-                            </div>
-
-                            <p class="project-description">Full-stack Flask application using Anthropic's Claude API for personalized study plans and optimize student workload. Implemented intelligent workload management with deadline detection, cognitive load calculation, and AI-driven study recommendations. Deployed to Heroku with production-ready configuration and currently has 11 users.</p>
-                        </div>
+        <!-- Skills -->
+        <section id="skills" class="section section-alt" aria-labelledby="skills-title">
+            <div class="container">
+                <h2 id="skills-title" class="section-title reveal"><span class="section-kicker">04</span>Skills</h2>
+                <div class="skills-grid">
+                    <div class="card skill-group reveal">
+                        <h3 class="card-title">Languages</h3>
+                        <ul class="chips chips-lg">
+                            <li>Python</li><li>TypeScript</li><li>JavaScript</li><li>Java</li><li>C++</li><li>C#</li><li>SQL</li><li>R</li>
+                        </ul>
+                    </div>
+                    <div class="card skill-group reveal">
+                        <h3 class="card-title">Frameworks</h3>
+                        <ul class="chips chips-lg">
+                            <li>React</li><li>Node.js</li><li>Spring Boot</li><li>FastAPI</li><li>Flask</li>
+                        </ul>
+                    </div>
+                    <div class="card skill-group reveal">
+                        <h3 class="card-title">Data &amp; Infrastructure</h3>
+                        <ul class="chips chips-lg">
+                            <li>PostgreSQL</li><li>MongoDB</li><li>MySQL</li><li>SQLite</li><li>Supabase</li><li>Pandas</li><li>Docker</li><li>Fly.io</li><li>Git</li><li>GitHub Actions</li><li>CI/CD</li>
+                        </ul>
                     </div>
                 </div>
+                <div class="interests reveal">
+                    <h3 class="interests-title">Interests</h3>
+                    <p>Full-Stack Development · Distributed Systems Architecture · Cloud Infrastructure · Agentic AI · AI/ML Applications · Computer Vision</p>
+                </div>
+            </div>
+        </section>
 
-                <div class="project-item fade-in">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://via.placeholder.com/600x400" alt="API Integration Dashboard">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="#" class="btn btn-secondary btn-3d">View Project</a>
-                                    <a href="https://github.com/Bjay4910/API-" class="btn btn-secondary btn-3d">GitHub</a>
-                                </div>
-                            </div>
+        <!-- Education -->
+        <section id="education" class="section" aria-labelledby="education-title">
+            <div class="container">
+                <h2 id="education-title" class="section-title reveal"><span class="section-kicker">05</span>Education</h2>
+                <article class="card education-card reveal">
+                    <div class="education-head">
+                        <div>
+                            <h3 class="card-title">B.S. Computer Science and Applied Mathematics</h3>
+                            <p class="meta">Thomas College · Waterville, ME</p>
                         </div>
-
-                        <div class="project-content">
-                            <h3 class="project-title">API Integration Dashboard</h3>
-
-                            <div class="project-tags">
-                                <span class="project-tag">JavaScript</span>
-                                <span class="project-tag">React</span>
-                                <span class="project-tag">REST APIs</span>
-                            </div>
-
-                            <p class="project-description">Developed a customized dashboard integrating multiple external APIs (weather, stocks, social media) with a unified interface. Implemented efficient data coaching system improving load times by 60% and reducing API call volume. Built interactive data visualization components allowing users to create personalized monitoring displays.</p>
+                        <div class="education-side">
+                            <p class="badge">Expected December 2026</p>
+                            <p class="gpa"><strong>3.94</strong>/4.0 GPA</p>
                         </div>
                     </div>
+                    <div class="education-cols">
+                        <div>
+                            <h4 class="label">Awards &amp; honors</h4>
+                            <ul class="honors">
+                                <li>Gamma Beta Phi Honorary Award</li>
+                                <li>Thomas College Presidential Scholar</li>
+                                <li>Honors Roll</li>
+                                <li>Dean's List</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="label">Relevant coursework</h4>
+                            <ul class="chips">
+                                <li>Data Structures and Algorithms</li><li>Distributed Systems &amp; Cloud Computing</li><li>Operating Systems</li><li>Intelligent Systems</li><li>Databases</li><li>Linear Algebra</li><li>Numerical Methods</li><li>Software Engineering</li><li>Object-Oriented Programming (C++)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Leadership -->
+        <section id="leadership" class="section section-alt" aria-labelledby="leadership-title">
+            <div class="container">
+                <h2 id="leadership-title" class="section-title reveal"><span class="section-kicker">06</span>Leadership &amp; Activities</h2>
+                <div class="leadership-grid">
+                    <article class="card lead reveal">
+                        <p class="lead-date">Sep 2025 - Present</p>
+                        <h3 class="card-title">Computer Science &amp; Math Tutor</h3>
+                        <p class="meta">Thomas College</p>
+                        <p>Tutor <strong>10</strong> students weekly on average across CS and math courses, with <strong>90%</strong> earning an A in their course.</p>
+                    </article>
+                    <article class="card lead reveal">
+                        <p class="lead-date">Jul 2024</p>
+                        <h3 class="card-title">Delegate</h3>
+                        <p class="meta">Model United Nations</p>
+                        <p>Negotiated with <strong>50+</strong> international delegates to pass <strong>2</strong> resolutions on climate-resilient agriculture in Sub-Saharan Africa.</p>
+                    </article>
+                    <article class="card lead reveal">
+                        <p class="lead-date">Jan 2024 - May 2024</p>
+                        <h3 class="card-title">Mentor &amp; Tutor</h3>
+                        <p class="meta">McKenzie High School Coding Club</p>
+                        <p>Designed Python Turtle and Finch Robot curriculum taught to <strong>15</strong> middle school students through hands-on projects.</p>
+                    </article>
+                    <article class="card lead reveal">
+                        <p class="lead-date">Sep 2024</p>
+                        <h3 class="card-title">Participant</h3>
+                        <p class="meta">HackMIT · Cambridge, MA</p>
+                        <p>Worked on an AI face recognition attendance system.</p>
+                        <ul class="chips" aria-label="Technologies">
+                            <li>YOLOv5</li><li>OpenCV</li><li>React</li><li>Flask</li><li>MongoDB</li>
+                        </ul>
+                    </article>
                 </div>
+                <div class="affiliations reveal">
+                    <h3 class="interests-title">Affiliations</h3>
+                    <ul class="chips chips-lg">
+                        <li>ColorStack</li><li>CodePath</li><li>NSBE</li><li>TechElevate</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-                <div class="project-item fade-in">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://via.placeholder.com/600x400" alt="Edu Earn App">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="#" class="btn btn-secondary btn-3d">View Project</a>
-                                    <a href="https://github.com/Bjay4910/Edu-Earn" class="btn btn-secondary btn-3d">GitHub</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="project-content">
-                            <h3 class="project-title">Edu Earn App</h3>
-
-                            <div class="project-tags">
-                                <span class="project-tag">Flutter</span>
-                                <span class="project-tag">Dart</span>
-                                <span class="project-tag">Firebase</span>
-                                <span class="project-tag">BLOC Pattern</span>
-                            </div>
-
-                            <p class="project-description">Built a cross-platform app with BLOC pattern and clean architecture for connecting students with employment opportunities. Implemented Firebase authentication, cloud storage and real-time database integration with repository pattern for seamless data management. Engineered responsive UI with device-specific layouts using adaptive widgets and custom design systems.</p>
-                        </div>
+        <!-- Contact -->
+        <section id="contact" class="section" aria-labelledby="contact-title">
+            <div class="container">
+                <div class="contact card reveal">
+                    <h2 id="contact-title" class="section-title"><span class="section-kicker">07</span>Get in touch</h2>
+                    <p class="contact-lede">Open to software engineering, AI/agentic systems and systems roles. Email is the best way to reach me.</p>
+                    <div class="contact-actions">
+                        <a href="mailto:james.b.gyampoh@gmail.com" class="btn btn-primary">james.b.gyampoh@gmail.com</a>
+                        <a href="https://www.linkedin.com/in/james-gyampoh-39849b2b1/" class="btn btn-ghost" target="_blank" rel="noopener">LinkedIn</a>
+                        <a href="https://github.com/Bjay4910" class="btn btn-ghost" target="_blank" rel="noopener">GitHub</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-
-    <!-- Education Section -->
-    <section id="education" class="education section">
-        <div class="container">
-            <h2 class="section-title fade-in">Education</h2>
-
-            <div class="education-wrapper">
-                <div class="education-item fade-in">
-                    <div class="education-timeline">
-                        <div class="education-date">2027</div>
-                    </div>
-
-                    <div class="education-content">
-                        <div class="education-card">
-                            <h3 class="education-degree">B.S. in Computer Science and Applied Mathematics</h3>
-                            <p class="education-school">Thomas College, Waterville, ME, USA</p>
-                            <p class="education-period">Expected Graduation: May 2027</p>
-                            <p>GPA: 3.94/4.0; Honors Roll, Dean's List</p>
-
-                            <div class="education-description">
-                                <p><strong>Relevant Coursework:</strong> Object-Oriented Programming (Java), Systems Engineering, Data Structures and Algorithms, Databases, Data Science and Analytics, Differential Equations, Business Analytics, Software Engineering</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Awards Section -->
-    <section id="awards" class="awards section">
-        <div class="section-background"></div>
-        <div class="container">
-            <h2 class="section-title fade-in">Awards & Leadership</h2>
-
-            <div class="awards-grid">
-                <div class="award-item fade-in">
-                    <div class="award-card">
-                        <div class="award-icon">
-                            <img src="images/awards/trophy.svg" alt="Trophy" class="award-svg">
-                        </div>
-                        <h3 class="award-title">Amazon X Codepath Scholar</h3>
-                        <p class="award-organization">September 2024</p>
-                        <p>$3,000 scholarship award</p>
-                    </div>
-                </div>
-
-                <div class="award-item fade-in">
-                    <div class="award-card">
-                        <div class="award-icon">
-                            <img src="images/awards/medal.svg" alt="Medal" class="award-svg">
-                        </div>
-                        <h3 class="award-title">Thomas College Presidential Scholar</h3>
-                        <p class="award-organization">September 2024</p>
-                        <p>$20,000 scholarship award</p>
-                    </div>
-                </div>
-
-                <div class="award-item fade-in">
-                    <div class="award-card">
-                        <div class="award-icon">
-                            <img src="images/awards/certificate.svg" alt="Certificate" class="award-svg">
-                        </div>
-                        <h3 class="award-title">ColorStack Core Member</h3>
-                        <p class="award-organization">April 2025</p>
-                        <p>Active member and contributor in the ColorStack community</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-        <div class="container">
-            <h2 class="section-title fade-in">Contact Me</h2>
-
-            <div class="contact-content">
-                <div class="contact-info fade-in">
-                    <div class="contact-card">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <img src="images/ui/email.svg" alt="Email" class="contact-svg">
-                            </div>
-                            <div class="contact-details">
-                                <h4>Email</h4>
-                                <p>james.b.gyampoh@gmail.com</p>
-                            </div>
-                        </div>
-
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <img src="images/ui/phone.svg" alt="Phone" class="contact-svg">
-                            </div>
-                            <div class="contact-details">
-                                <h4>Phone</h4>
-                                <p>+1 (731) 535-4260</p>
-                            </div>
-                        </div>
-
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <img src="images/ui/location.svg" alt="Location" class="contact-svg">
-                            </div>
-                            <div class="contact-details">
-                                <h4>Location</h4>
-                                <p>Waterville, Maine, USA</p>
-                            </div>
-                        </div>
-
-                        <div class="contact-socials">
-                            <h4 style="margin-bottom: 1rem;">Connect With Me</h4>
-                            <div class="hero-socials">
-                                <a href="https://github.com/Bjay4910" class="social-icon"><img src="images/social/github.svg" alt="GitHub" class="social-svg"></a>
-                                <a href="http://www.linkedin.com/in/james-gyampoh-39849b2b1" class="social-icon"><img src="images/social/linkedin.svg" alt="LinkedIn" class="social-svg"></a>
-                                <a href="#" class="social-icon"><img src="images/social/twitter.svg" alt="Twitter" class="social-svg"></a>
-                                <a href="#" class="social-icon"><img src="images/social/instagram.svg" alt="Instagram" class="social-svg"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="contact-form fade-in">
-                    <div class="form-card">
-                        <form id="contactForm">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Your Name" required>
-                            </div>
-
-                            <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Your Email" required>
-                            </div>
-
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Subject" required>
-                            </div>
-
-                            <div class="form-group">
-                                <textarea class="form-control" placeholder="Your Message" required></textarea>
-                            </div>
-
-                            <button type="submit" class="btn btn-3d">Send Message</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">James</div>
-
-                <div class="footer-socials">
-                    <a href="https://github.com/Bjay4910" class="social-icon"><img src="images/social/github.svg" alt="GitHub" class="social-svg"></a>
-                    <a href="http://www.linkedin.com/in/james-gyampoh-39849b2b1" class="social-icon"><img src="images/social/linkedin.svg" alt="LinkedIn" class="social-svg"></a>
-                    <a href="#" class="social-icon"><img src="images/social/twitter.svg" alt="Twitter" class="social-svg"></a>
-                    <a href="#" class="social-icon"><img src="images/social/instagram.svg" alt="Instagram" class="social-svg"></a>
-                </div>
-
-                <div class="footer-links">
-                    <a href="#home" class="footer-link">Home</a>
-                    <a href="#about" class="footer-link">About</a>
-                    <a href="#tech-stack" class="footer-link">Tech Stack</a>
-                    <a href="#projects" class="footer-link">Projects</a>
-                    <a href="#contact" class="footer-link">Contact</a>
-                </div>
-
-                <p class="copyright">© 2025 James. All Rights Reserved.</p>
-            </div>
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© <span id="year">2026</span> Barnabas James Gyampoh</p>
+            <ul class="footer-links">
+                <li><a href="mailto:james.b.gyampoh@gmail.com">Email</a></li>
+                <li><a href="https://www.linkedin.com/in/james-gyampoh-39849b2b1/" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><a href="https://github.com/Bjay4910" target="_blank" rel="noopener">GitHub</a></li>
+                <li><a href="#home">Back to top</a></li>
+            </ul>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
 </body>
 </html>

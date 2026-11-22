@@ -1,33 +1,29 @@
-# James Gyampoh's Portfolio Website
+# Barnabas James Gyampoh - Portfolio
 
-This is my personal portfolio website showcasing my projects, skills, and experience as a Computer Science student and developer.
+Personal portfolio of Barnabas James Gyampoh, Computer Science & Applied Mathematics student and developer (Thomas College, graduating December 2026).
 
-## Features
+Live: [https://bjay4910.github.io/Portfolio/](https://bjay4910.github.io/Portfolio/)
 
-- Interactive and responsive design
-- Project showcase with live demos and GitHub links
-- Detailed information about my tech stack and experience
-- Contact information and resume
+## Stack
 
-## Projects Featured
+- Static HTML, CSS and vanilla JavaScript. No framework, no build step, no CDNs, trackers or analytics.
+- System font stack; project visuals are inline SVG and CSS gradients.
+- Deployed to GitHub Pages by `.github/workflows/deploy.yml` (pushes the repo root to `gh-pages` on every push to `main`).
 
-1. Intelligent Travel Planner - AI-powered travel planning application
-2. Customer Relationship Analytics Platform - Full-stack CRM with analytics dashboard
-3. StudyFlow App - Flask application using Claude API for personalized study plans
-4. API Integration Dashboard - Custom dashboard with multiple external API integrations
-5. Edu Earn App - Cross-platform app connecting students with employment opportunities
+## Structure
 
-## Technologies Used
+- `index.html` - the single page (hero, about, experience, projects, skills, education, leadership, contact)
+- `css/styles.css` - design tokens, layout and responsive rules
+- `js/main.js` - mobile nav, active-section highlight, reveal-on-scroll (respects `prefers-reduced-motion`)
+- `images/profile-560.jpg` - web-sized profile photo (original kept at `images/profilepic.png`)
+- `assets/Barnabas_Gyampoh_Resume_Full.pdf` - resume linked from the page (add the file here)
 
-- HTML5/CSS3 for structure and styling
-- JavaScript for interactive elements
-- Responsive design for all device sizes
-- 3D effects and animations
+## Run locally
 
-## View Live
-
-Visit my portfolio at: [https://bjay4910.github.io/Portfolio/](https://bjay4910.github.io/Portfolio/)
+```sh
+python3 -m http.server 8000 --bind 127.0.0.1
+```
 
 ## Contact
 
-Feel free to reach out to me at james.b.gyampoh@gmail.com for any inquiries or opportunities.
+james.b.gyampoh@gmail.com
