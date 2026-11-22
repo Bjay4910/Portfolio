@@ -22,7 +22,6 @@ Live: [https://bjay4910.github.io/Portfolio/](https://bjay4910.github.io/Portfol
 - `site.config.js` - demo and repository URLs (see below)
 - `images/og.png` - Open Graph image, rendered from `tools/og-image.html` with headless Chromium at 1200x630
 - `images/profile-560.jpg` - web-sized profile photo (original kept at `images/profilepic.png`)
-- `assets/Barnabas_Gyampoh_Resume_Full.pdf` - resume linked from the page (add the file here)
 
 ## Demo and repo links (`site.config.js`)
 
@@ -42,6 +41,10 @@ window.SITE_CONFIG = {
 ```sh
 python3 -m http.server 8000 --bind 127.0.0.1
 ```
+
+## Resume
+
+The resume is not published in this repository. It is shared on request: the **Request my resume** buttons (hero, About and the command palette) open a pre-filled email (subject "Resume request"). PDFs matching `*Resume*.pdf`, `*resume*.pdf`, `*CV*.pdf` and `assets/*.pdf` are git-ignored so a copy is not committed by accident.
 
 ## Contact
 

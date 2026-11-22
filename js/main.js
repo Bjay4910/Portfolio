@@ -28,7 +28,7 @@
 
     // The contact address is read from the page itself (single source of truth).
     var mailLink = $('a[href^="mailto:"]');
-    var EMAIL = mailLink ? mailLink.getAttribute('href').replace(/^mailto:/, '') : '';
+    var EMAIL = mailLink ? mailLink.getAttribute('href').replace(/^mailto:/, '').split('?')[0] : '';
 
     /* ---------------- Toast + clipboard ---------------- */
     var toastEl = $('#toast');
@@ -522,7 +522,7 @@
     function linkHref(sel) { var a = $(sel); return a ? a.href : ''; }
     var GITHUB = linkHref('.hero-actions a[href*="github.com"]');
     var LINKEDIN = linkHref('.hero-actions a[href*="linkedin.com"]');
-    var RESUME = linkHref('.hero-actions a[href$=".pdf"]');
+    var RESUME_MAIL = linkHref('a.resume-request[href^="mailto:"]');
 
     var items = [];
     links.forEach(function (l) {
@@ -550,7 +550,7 @@
         { label: 'GitHub profile', group: 'Link', kw: 'code repositories source', run: function () { openUrl(GITHUB); } },
         { label: 'LinkedIn', group: 'Link', kw: 'profile network', run: function () { openUrl(LINKEDIN); } },
         { label: 'Copy email address', group: 'Action', kw: 'mail contact', run: function () { copyText(EMAIL); } },
-        { label: 'Open resume (PDF)', group: 'Link', kw: 'cv resume', run: function () { openUrl(RESUME); } },
+        { label: 'Request my resume', group: 'Action', kw: 'cv resume email request', run: function () { if (RESUME_MAIL) window.location.href = RESUME_MAIL; } },
         { label: 'Toggle light / dark theme', group: 'Action', kw: 'theme dark light mode', run: toggleTheme },
         { label: 'Back to top', group: 'Section', kw: 'home hero top', run: function () { goSection('home'); } }
     );
