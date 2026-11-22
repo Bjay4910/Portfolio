@@ -6,17 +6,36 @@ Live: [https://bjay4910.github.io/Portfolio/](https://bjay4910.github.io/Portfol
 
 ## Stack
 
-- Static HTML, CSS and vanilla JavaScript. No framework, no build step, no CDNs, trackers or analytics.
-- System font stack; project visuals are inline SVG and CSS gradients.
+- Static HTML, CSS and vanilla JavaScript. No framework, no build step, no runtime requests to any other host (no CDNs, hosted fonts, trackers or analytics).
+- System font stack; project visuals and architecture diagrams are hand-written inline SVG themed with CSS variables.
+- Hero: a 3D node network drawn with Canvas 2D and a manual perspective projection (`js/hero.js`, no library). It loads only on desktop (>= 768px wide, fine pointer, no reduced-motion preference) and pauses when the tab is hidden or the hero is off-screen.
+- Dark theme by default, light theme via `prefers-color-scheme` or the toggle (saved in `localStorage`). Command palette: Ctrl/Cmd + K.
+- Works with JavaScript disabled: all content is in the HTML; scripts only enhance.
 - Deployed to GitHub Pages by `.github/workflows/deploy.yml` (pushes the repo root to `gh-pages` on every push to `main`).
 
 ## Structure
 
 - `index.html` - the single page (hero, about, experience, projects, skills, education, leadership, contact)
 - `css/styles.css` - design tokens, layout and responsive rules
-- `js/main.js` - mobile nav, active-section highlight, reveal-on-scroll (respects `prefers-reduced-motion`)
+- `js/main.js` - nav, theme, command palette, project filter and detail dialog, counters, timeline, cursor glow, tilt, parallax
+- `js/hero.js` - Canvas 2D hero scene (desktop only)
+- `site.config.js` - demo and repository URLs (see below)
+- `images/og.png` - Open Graph image, rendered from `tools/og-image.html` with headless Chromium at 1200x630
 - `images/profile-560.jpg` - web-sized profile photo (original kept at `images/profilepic.png`)
 - `assets/Barnabas_Gyampoh_Resume_Full.pdf` - resume linked from the page (add the file here)
+
+## Demo and repo links (`site.config.js`)
+
+```js
+window.SITE_CONFIG = {
+    demos: { powerManager: "", memoryHub: "", vigil: "", lyra: "", syncscript: "" },
+    repos: { powerManager: "https://github.com/...", memoryHub: "https://github.com/...", lyra: "", vigil: "", syncscript: "" }
+};
+```
+
+- Put an `https://` URL in `demos.<project>` to show a **Watch demo** button on that card and in its detail dialog. Empty strings hide the button.
+- Put an `https://` URL in `repos.<project>` to add a **GitHub** button to a card that does not already have one.
+- Project dialogs are linkable: `#project-power-manager`, `#project-memory-hub`, `#project-lyra`, `#project-vigil`, `#project-syncscript`.
 
 ## Run locally
 

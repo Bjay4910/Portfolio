@@ -6,6 +6,7 @@
     <title>Barnabas James Gyampoh - Developer Portfolio</title>
     <meta name="description" content="Barnabas James Gyampoh - Computer Science &amp; Applied Mathematics student building agentic AI and systems projects">
     <meta name="author" content="Barnabas James Gyampoh">
+    <meta name="color-scheme" content="dark light">
     <meta name="theme-color" content="#0b0e14">
     <link rel="canonical" href="https://bjay4910.github.io/Portfolio/">
 
@@ -15,25 +16,61 @@
     <meta property="og:title" content="Barnabas James Gyampoh - Developer Portfolio">
     <meta property="og:description" content="Barnabas James Gyampoh - Computer Science &amp; Applied Mathematics student building agentic AI and systems projects">
     <meta property="og:site_name" content="Barnabas James Gyampoh">
+    <meta property="og:image" content="https://bjay4910.github.io/Portfolio/images/og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Barnabas James Gyampoh - Computer Science &amp; Applied Mathematics student and developer. GPA 3.94, graduating December 2026, 5 projects.">
 
     <!-- Twitter card (no account linked) -->
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Barnabas James Gyampoh - Developer Portfolio">
     <meta name="twitter:description" content="Barnabas James Gyampoh - Computer Science &amp; Applied Mathematics student building agentic AI and systems projects">
+    <meta name="twitter:image" content="https://bjay4910.github.io/Portfolio/images/og.png">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Barnabas James Gyampoh",
+        "jobTitle": "Computer Science & Applied Mathematics student and developer",
+        "url": "https://bjay4910.github.io/Portfolio/",
+        "email": "mailto:james.b.gyampoh@gmail.com",
+        "image": "https://bjay4910.github.io/Portfolio/images/profile-560.jpg",
+        "sameAs": [
+            "https://github.com/Bjay4910",
+            "https://www.linkedin.com/in/james-gyampoh-39849b2b1/"
+        ],
+        "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "Thomas College",
+            "address": { "@type": "PostalAddress", "addressLocality": "Waterville", "addressRegion": "ME" }
+        }
+    }
+    </script>
 
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0e14'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='system-ui,-apple-system,Segoe UI,Roboto,sans-serif' font-size='28' font-weight='700' fill='%235eead4'%3EBG%3C/text%3E%3C/svg%3E">
     <link rel="stylesheet" href="css/styles.css">
-    <script>document.documentElement.classList.add('js');</script>
+    <script>
+        (function () {
+            var d = document.documentElement;
+            d.classList.add('js');
+            try {
+                var t = localStorage.getItem('theme');
+                if (t === 'light' || t === 'dark') d.setAttribute('data-theme', t);
+            } catch (e) {}
+        })();
+    </script>
+    <script src="site.config.js" defer></script>
+    <script src="js/main.js" defer></script>
 </head>
 <body>
     <a class="skip-link" href="#main">Skip to content</a>
+    <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
 
     <header class="site-header" id="top">
+        <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
         <nav class="nav container" aria-label="Primary">
             <a href="#home" class="nav-logo" aria-label="Barnabas James Gyampoh, back to top">BG<span class="nav-logo-dot">.</span></a>
-            <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">
-                <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
-            </button>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#experience" class="nav-link">Experience</a></li>
@@ -43,23 +80,42 @@
                 <li><a href="#leadership" class="nav-link">Leadership</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
+            <div class="nav-actions">
+                <button type="button" class="icon-btn kbd-btn needs-js" id="paletteBtn" aria-haspopup="dialog" aria-controls="palette" aria-keyshortcuts="Control+K Meta+K">
+                    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 16l4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    <span class="visually-hidden">Open command palette</span>
+                    <kbd class="kbd-hint" id="kbdHint" aria-hidden="true">Ctrl K</kbd>
+                </button>
+                <button type="button" class="icon-btn needs-js" id="themeToggle" aria-label="Switch to light theme">
+                    <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+                </button>
+                <button type="button" class="icon-btn nav-toggle needs-js" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">
+                    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+                </button>
+            </div>
         </nav>
     </header>
 
     <main id="main">
         <!-- Hero -->
         <section id="home" class="hero" aria-labelledby="hero-title">
+            <canvas class="hero-canvas" id="heroCanvas" aria-hidden="true"></canvas>
             <div class="container hero-grid">
-                <div class="hero-text">
+                <div class="hero-text" id="heroText">
                     <p class="eyebrow">Hi, I'm James</p>
                     <h1 id="hero-title" class="hero-name">Barnabas James Gyampoh</h1>
+                    <p class="hero-role" id="heroRole">
+                        <span class="role-static">Software Engineer · Agentic AI · Distributed Systems</span>
+                        <span class="role-rotator" aria-hidden="true"></span>
+                    </p>
                     <p class="hero-title">Computer Science &amp; Applied Mathematics student and developer.</p>
                     <p class="hero-lede">Graduating December 2026. Open to software engineering, AI/agentic systems and systems roles.</p>
 
                     <ul class="hero-facts" aria-label="Quick facts">
                         <li><span class="fact-value">3.94</span><span class="fact-label">GPA</span></li>
-                        <li><span class="fact-value">Dec 2026</span><span class="fact-label">Graduation</span></li>
-                        <li><span class="fact-value">5</span><span class="fact-label">Featured projects</span></li>
+                        <li><span class="fact-value">December 2026</span><span class="fact-label">Graduating</span></li>
+                        <li><span class="fact-value">5</span><span class="fact-label">Projects</span></li>
                     </ul>
 
                     <div class="hero-actions">
@@ -71,13 +127,13 @@
                 </div>
 
                 <div class="hero-photo">
-                    <img src="images/profile-560.jpg" width="560" height="809" alt="Portrait of Barnabas James Gyampoh" fetchpriority="high">
+                    <img src="images/profile-560.jpg" width="560" height="809" alt="Portrait of Barnabas James Gyampoh" fetchpriority="high" decoding="async">
                 </div>
             </div>
         </section>
 
         <!-- About -->
-        <section id="about" class="section" aria-labelledby="about-title">
+        <section id="about" class="section" aria-labelledby="about-title" tabindex="-1">
             <div class="container">
                 <h2 id="about-title" class="section-title reveal"><span class="section-kicker">01</span>About</h2>
                 <div class="about-grid">
@@ -87,20 +143,21 @@
                         <a href="assets/Barnabas_Gyampoh_Resume_Full.pdf" class="btn btn-ghost" target="_blank" rel="noopener">View Resume</a>
                     </div>
                     <ul class="stats reveal" aria-label="At a glance">
-                        <li class="stat"><span class="stat-number">3.94</span><span class="stat-label">Cumulative GPA</span></li>
-                        <li class="stat"><span class="stat-number">8</span><span class="stat-label">Programming languages</span></li>
-                        <li class="stat"><span class="stat-number">5</span><span class="stat-label">Featured projects</span></li>
-                        <li class="stat"><span class="stat-number">4</span><span class="stat-label">Awards &amp; honors</span></li>
+                        <li class="stat"><span class="stat-number" data-count="3.94" data-decimals="2">3.94</span><span class="stat-label">Cumulative GPA</span></li>
+                        <li class="stat"><span class="stat-number" data-count="8">8</span><span class="stat-label">Programming languages</span></li>
+                        <li class="stat"><span class="stat-number" data-count="5">5</span><span class="stat-label">Featured projects</span></li>
+                        <li class="stat"><span class="stat-number" data-count="4">4</span><span class="stat-label">Awards &amp; honors</span></li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <!-- Experience -->
-        <section id="experience" class="section section-alt" aria-labelledby="experience-title">
+        <section id="experience" class="section section-alt" aria-labelledby="experience-title" tabindex="-1">
             <div class="container">
                 <h2 id="experience-title" class="section-title reveal"><span class="section-kicker">02</span>Experience</h2>
-                <ol class="timeline">
+                <ol class="timeline" id="timeline">
+                    <li class="timeline-line" aria-hidden="true"><span class="timeline-progress" id="timelineProgress"></span></li>
                     <li class="timeline-item reveal">
                         <div class="timeline-year">2026 - Now</div>
                         <article class="card timeline-card">
@@ -144,115 +201,284 @@
         </section>
 
         <!-- Projects -->
-        <section id="projects" class="section" aria-labelledby="projects-title">
+        <section id="projects" class="section" aria-labelledby="projects-title" tabindex="-1">
             <div class="container">
                 <h2 id="projects-title" class="section-title reveal"><span class="section-kicker">03</span>Featured Projects</h2>
 
-                <div class="projects-grid">
+                <div class="filters needs-js" role="group" aria-label="Filter projects">
+                    <button type="button" class="filter-chip" data-filter="all" aria-pressed="true">All</button>
+                    <button type="button" class="filter-chip" data-filter="agentic" aria-pressed="false">Agentic AI</button>
+                    <button type="button" class="filter-chip" data-filter="systems" aria-pressed="false">Systems</button>
+                    <button type="button" class="filter-chip" data-filter="fullstack" aria-pressed="false">Full-Stack</button>
+                    <p class="filter-status visually-hidden" id="filterStatus" role="status" aria-live="polite"></p>
+                </div>
+
+                <div class="projects-grid" id="projectsGrid">
                     <!-- 1. Agent-Aware Power Manager -->
-                    <article class="card project reveal">
-                        <div class="project-visual" role="img" aria-label="Agent-Aware Power Manager: illustration of a moon and battery">
-                            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M30 8a14 14 0 1 0 10 24A16 16 0 0 1 30 8z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><rect x="8" y="34" width="18" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="2.5"/><rect x="11" y="37" width="5" height="2" fill="currentColor"/><path d="M28 37v2" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
-                            <span class="project-visual-name">Agent-Aware Power Manager</span>
-                        </div>
-                        <div class="project-body">
-                            <h3 class="card-title">Agent-Aware Power Manager</h3>
-                            <p class="project-sub">Sleep Control for AI Agents</p>
-                            <ul class="chips" aria-label="Technologies">
-                                <li>Python</li><li>rumps</li><li>psutil</li><li>macOS</li>
-                            </ul>
-                            <ul class="bullets">
-                                <li>Built a menubar app that blocks sleep only while agents work, with a <strong>2-hour</strong> cap and <strong>25%</strong> battery floor.</li>
-                                <li>Scoped admin access to <strong>1</strong> sudoers rule for pmset, so the app never needs full root privileges.</li>
-                                <li>Validated on real hardware with a logged hold-and-release run, plus <strong>141</strong> automated tests.</li>
-                            </ul>
-                            <div class="project-links">
-                                <a href="https://github.com/Bjay4910/agent-aware-power-manager" class="btn btn-small" target="_blank" rel="noopener">GitHub<span class="visually-hidden"> repository for Agent-Aware Power Manager</span></a>
+                    <article class="project reveal" id="project-power-manager" data-key="powerManager" data-cats="agentic systems" aria-labelledby="pt-power-manager">
+                        <div class="project-card">
+                            <div class="project-visual" role="img" aria-label="Agent-Aware Power Manager: illustration of a moon and battery">
+                                <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M30 8a14 14 0 1 0 10 24A16 16 0 0 1 30 8z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><rect x="8" y="34" width="18" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="2.5"/><rect x="11" y="37" width="5" height="2" fill="currentColor"/><path d="M28 37v2" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+                                <span class="project-visual-name">Agent-Aware Power Manager</span>
+                            </div>
+                            <div class="project-body">
+                                <h3 class="card-title" id="pt-power-manager">Agent-Aware Power Manager</h3>
+                                <p class="project-sub">Sleep Control for AI Agents</p>
+                                <ul class="chips" aria-label="Technologies">
+                                    <li>Python</li><li>rumps</li><li>psutil</li><li>macOS</li>
+                                </ul>
+                                <ul class="bullets">
+                                    <li>Built a menubar app that blocks sleep only while agents work, with a <strong>2-hour</strong> cap and <strong>25%</strong> battery floor.</li>
+                                    <li>Scoped admin access to <strong>1</strong> sudoers rule for pmset, so the app never needs full root privileges.</li>
+                                    <li>Validated on real hardware with a logged hold-and-release run, plus <strong>141</strong> automated tests.</li>
+                                </ul>
+                                <div class="project-links">
+                                    <a href="https://github.com/Bjay4910/agent-aware-power-manager" class="btn btn-small" target="_blank" rel="noopener">GitHub<span class="visually-hidden"> repository for Agent-Aware Power Manager</span></a>
+                                    <button type="button" class="btn btn-small btn-ghost project-open needs-js">Architecture &amp; details<span class="visually-hidden"> for Agent-Aware Power Manager</span></button>
+                                </div>
+                            </div>
+                            <div class="project-detail">
+                                <h4 class="label">Architecture</h4>
+                                <figure class="diagram" tabindex="0" aria-label="Agent-Aware Power Manager architecture diagram, scrollable">
+                                    <svg class="dg" viewBox="0 0 720 320" width="720" height="320" role="img" aria-label="Agent-Aware Power Manager architecture. Claude Code hooks and Antigravity hooks write presence files. A heartbeat daemon reads them and drives the menubar app, built with Python, rumps and psutil. The menubar app runs pmset disablesleep through 1 sudoers rule. Limits: 2-hour cap, 25% battery floor, 20 s idle grace.">
+                                        <rect class="dg-box" x="20" y="20" width="180" height="48" rx="10"/>
+                                        <text class="dg-t" x="110" y="49" text-anchor="middle">Claude Code hooks</text>
+                                        <rect class="dg-box" x="20" y="84" width="180" height="48" rx="10"/>
+                                        <text class="dg-t" x="110" y="113" text-anchor="middle">Antigravity hooks</text>
+                                        <path class="dg-line" d="M200 44 C 225 44, 230 70, 252 72"/>
+                                        <polygon class="dg-head" points="260,72 251,67 251,77"/>
+                                        <path class="dg-line" d="M200 108 C 225 108, 230 82, 252 80"/>
+                                        <polygon class="dg-head" points="260,80 251,75 251,85"/>
+                                        <rect class="dg-box" x="260" y="52" width="160" height="48" rx="10"/>
+                                        <text class="dg-t" x="340" y="81" text-anchor="middle">Presence files</text>
+                                        <path class="dg-line" d="M420 76 H 470"/>
+                                        <polygon class="dg-head" points="478,76 469,71 469,81"/>
+                                        <rect class="dg-box" x="478" y="52" width="180" height="48" rx="10"/>
+                                        <text class="dg-t" x="568" y="81" text-anchor="middle">Heartbeat daemon</text>
+                                        <path class="dg-line" d="M568 100 V 172"/>
+                                        <polygon class="dg-head" points="568,180 563,171 573,171"/>
+                                        <rect class="dg-box dg-accent" x="448" y="180" width="240" height="64" rx="10"/>
+                                        <text class="dg-t" x="568" y="206" text-anchor="middle">Menubar app</text>
+                                        <text class="dg-s" x="568" y="228" text-anchor="middle">Python · rumps · psutil</text>
+                                        <path class="dg-line" d="M448 212 H 318"/>
+                                        <polygon class="dg-head" points="310,212 319,207 319,217"/>
+                                        <rect class="dg-box" x="60" y="180" width="250" height="64" rx="10"/>
+                                        <text class="dg-t dg-mono" x="185" y="206" text-anchor="middle">pmset disablesleep</text>
+                                        <text class="dg-s" x="185" y="228" text-anchor="middle">via 1 sudoers rule</text>
+                                        <rect class="dg-pill" x="190" y="266" width="120" height="32" rx="16"/>
+                                        <text class="dg-p" x="250" y="287" text-anchor="middle">2-hour cap</text>
+                                        <rect class="dg-pill" x="324" y="266" width="170" height="32" rx="16"/>
+                                        <text class="dg-p" x="409" y="287" text-anchor="middle">25% battery floor</text>
+                                        <rect class="dg-pill" x="508" y="266" width="160" height="32" rx="16"/>
+                                        <text class="dg-p" x="588" y="287" text-anchor="middle">20 s idle grace</text>
+                                    </svg>
+                                </figure>
                             </div>
                         </div>
                     </article>
 
                     <!-- 2. Multi-Agent Memory Hub -->
-                    <article class="card project reveal">
-                        <div class="project-visual" role="img" aria-label="Multi-Agent Memory Hub: illustration of connected graph nodes">
-                            <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="5" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="10" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="38" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="24" cy="41" r="4" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M13 15l7 6M35 15l-7 6M24 29v8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
-                            <span class="project-visual-name">Multi-Agent Memory Hub</span>
-                        </div>
-                        <div class="project-body">
-                            <h3 class="card-title">Multi-Agent Memory Hub</h3>
-                            <p class="project-sub">Shared Memory for AI Agents</p>
-                            <ul class="chips" aria-label="Technologies">
-                                <li>Python</li><li>SQLite</li><li>MCP</li><li>Ollama</li>
-                            </ul>
-                            <ul class="bullets">
-                                <li>Built a SQLite graph memory with an MCP server so <strong>3</strong> agents (Claude, Gemini, Hermes) share recall.</li>
-                                <li>Engineered a pre-storage secret filter with <strong>50</strong> tested forms and <strong>0</strong> leaks across <strong>100K+</strong> fuzz combinations.</li>
-                                <li>Scored extraction at <strong>0.85 / 0.75 / 0.84</strong> F1 on <strong>3</strong> sets, backed by <strong>1,217</strong> tests and <strong>6</strong> independent reviews.</li>
-                            </ul>
-                            <p class="note">The 0 leaks apply to the tested forms; known gaps are documented in the repository.</p>
-                            <div class="project-links">
-                                <a href="https://github.com/Bjay4910/multi-agent-memory-hub" class="btn btn-small" target="_blank" rel="noopener">GitHub<span class="visually-hidden"> repository for Multi-Agent Memory Hub</span></a>
+                    <article class="project reveal" id="project-memory-hub" data-key="memoryHub" data-cats="agentic" aria-labelledby="pt-memory-hub">
+                        <div class="project-card">
+                            <div class="project-visual" role="img" aria-label="Multi-Agent Memory Hub: illustration of connected graph nodes">
+                                <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="5" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="10" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="38" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="24" cy="41" r="4" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M13 15l7 6M35 15l-7 6M24 29v8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+                                <span class="project-visual-name">Multi-Agent Memory Hub</span>
+                            </div>
+                            <div class="project-body">
+                                <h3 class="card-title" id="pt-memory-hub">Multi-Agent Memory Hub</h3>
+                                <p class="project-sub">Shared Memory for AI Agents</p>
+                                <ul class="chips" aria-label="Technologies">
+                                    <li>Python</li><li>SQLite</li><li>MCP</li><li>Ollama</li>
+                                </ul>
+                                <ul class="bullets">
+                                    <li>Built a SQLite graph memory with an MCP server so <strong>3</strong> agents (Claude, Gemini, Hermes) share recall.</li>
+                                    <li>Engineered a pre-storage secret filter with <strong>50</strong> tested forms and <strong>0</strong> leaks across <strong>100K+</strong> fuzz combinations.</li>
+                                    <li>Scored extraction at <strong>0.85 / 0.75 / 0.84</strong> F1 on <strong>3</strong> sets, backed by <strong>1,217</strong> tests and <strong>6</strong> independent reviews.</li>
+                                </ul>
+                                <p class="note">The 0 leaks apply to the tested forms; known gaps are documented in the repository.</p>
+                                <div class="project-links">
+                                    <a href="https://github.com/Bjay4910/multi-agent-memory-hub" class="btn btn-small" target="_blank" rel="noopener">GitHub<span class="visually-hidden"> repository for Multi-Agent Memory Hub</span></a>
+                                    <button type="button" class="btn btn-small btn-ghost project-open needs-js">Architecture &amp; details<span class="visually-hidden"> for Multi-Agent Memory Hub</span></button>
+                                </div>
+                            </div>
+                            <div class="project-detail">
+                                <h4 class="label">Architecture</h4>
+                                <figure class="diagram" tabindex="0" aria-label="Multi-Agent Memory Hub architecture diagram, scrollable">
+                                    <svg class="dg" viewBox="0 0 740 340" width="740" height="340" role="img" aria-label="Multi-Agent Memory Hub architecture. Claude, Gemini and Hermes send memories to extraction, then through a pre-storage secret filter into a SQLite graph memory with nodes, edges, provenance and FTS5 search. An MCP server serves recall back to all 3 agents. Note: the 0 leaks apply to the tested forms; known gaps are documented in the repository.">
+                                        <rect class="dg-box" x="20" y="30" width="120" height="44" rx="10"/>
+                                        <text class="dg-t" x="80" y="57" text-anchor="middle">Claude</text>
+                                        <rect class="dg-box" x="20" y="88" width="120" height="44" rx="10"/>
+                                        <text class="dg-t" x="80" y="115" text-anchor="middle">Gemini</text>
+                                        <rect class="dg-box" x="20" y="146" width="120" height="44" rx="10"/>
+                                        <text class="dg-t" x="80" y="173" text-anchor="middle">Hermes</text>
+                                        <path class="dg-line" d="M140 52 C 160 52, 160 106, 178 108"/>
+                                        <path class="dg-line" d="M140 110 H 178"/>
+                                        <path class="dg-line" d="M140 168 C 160 168, 160 114, 178 112"/>
+                                        <polygon class="dg-head" points="186,110 177,105 177,115"/>
+                                        <rect class="dg-box" x="186" y="86" width="130" height="48" rx="10"/>
+                                        <text class="dg-t" x="251" y="115" text-anchor="middle">Extraction</text>
+                                        <path class="dg-line" d="M316 110 H 346"/>
+                                        <polygon class="dg-head" points="354,110 345,105 345,115"/>
+                                        <rect class="dg-box dg-accent" x="354" y="78" width="160" height="64" rx="10"/>
+                                        <text class="dg-t" x="434" y="104" text-anchor="middle">Secret filter</text>
+                                        <text class="dg-s" x="434" y="126" text-anchor="middle">pre-storage</text>
+                                        <path class="dg-line" d="M514 110 H 544"/>
+                                        <polygon class="dg-head" points="552,110 543,105 543,115"/>
+                                        <rect class="dg-box" x="552" y="58" width="170" height="104" rx="10"/>
+                                        <text class="dg-t" x="637" y="86" text-anchor="middle">SQLite graph</text>
+                                        <text class="dg-t" x="637" y="106" text-anchor="middle">memory</text>
+                                        <text class="dg-s" x="637" y="128" text-anchor="middle">nodes · edges</text>
+                                        <text class="dg-s" x="637" y="148" text-anchor="middle">provenance · FTS5</text>
+                                        <path class="dg-line" d="M637 162 V 212"/>
+                                        <polygon class="dg-head" points="637,220 632,211 642,211"/>
+                                        <rect class="dg-box" x="552" y="220" width="170" height="48" rx="10"/>
+                                        <text class="dg-t" x="637" y="249" text-anchor="middle">MCP server</text>
+                                        <path class="dg-line" d="M552 244 H 352"/>
+                                        <polygon class="dg-head" points="344,244 353,239 353,249"/>
+                                        <rect class="dg-box dg-accent" x="20" y="220" width="324" height="48" rx="10"/>
+                                        <text class="dg-t" x="182" y="249" text-anchor="middle">Recall by all 3 agents</text>
+                                        <text class="dg-s" x="20" y="310">Note: the 0 leaks apply to the tested forms; known gaps are documented in the repository.</text>
+                                    </svg>
+                                </figure>
                             </div>
                         </div>
                     </article>
 
                     <!-- 3. Lyra -->
-                    <article class="card project reveal">
-                        <div class="project-visual" role="img" aria-label="Lyra: illustration of a layered tensor cube">
-                            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6l16 9v18l-16 9-16-9V15z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M8 15l16 9 16-9M24 24v18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M16 19.5v18M32 19.5v18" stroke="currentColor" stroke-width="1.5" opacity=".6"/></svg>
-                            <span class="project-visual-name">Lyra</span>
-                        </div>
-                        <div class="project-body">
-                            <h3 class="card-title">Lyra</h3>
-                            <p class="project-sub">A Minimal Tensor Inference Engine</p>
-                            <ul class="chips" aria-label="Technologies">
-                                <li>C++17</li><li>CMake</li><li>ONNX</li><li>Protobuf</li><li>PyTorch</li>
-                            </ul>
-                            <ul class="bullets">
-                                <li>Built a C++ tensor inference engine from scratch that runs MobileNetV2 with no ML framework at runtime.</li>
-                                <li>Sped up MobileNetV2 inference <strong>11.4x</strong> (<strong>467</strong> to <strong>41 ms</strong>, same -O3 build) by replacing naive Conv2D with im2col/GEMM.</li>
-                                <li>Matched PyTorch's top-1 on <strong>50/50</strong> ImageNet images with <strong>2.6e-5</strong> max output error.</li>
-                            </ul>
+                    <article class="project reveal" id="project-lyra" data-key="lyra" data-cats="systems" aria-labelledby="pt-lyra">
+                        <div class="project-card">
+                            <div class="project-visual" role="img" aria-label="Lyra: illustration of a layered tensor cube">
+                                <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6l16 9v18l-16 9-16-9V15z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M8 15l16 9 16-9M24 24v18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M16 19.5v18M32 19.5v18" stroke="currentColor" stroke-width="1.5" opacity=".6"/></svg>
+                                <span class="project-visual-name">Lyra</span>
+                            </div>
+                            <div class="project-body">
+                                <h3 class="card-title" id="pt-lyra">Lyra</h3>
+                                <p class="project-sub">A Minimal Tensor Inference Engine</p>
+                                <ul class="chips" aria-label="Technologies">
+                                    <li>C++17</li><li>CMake</li><li>ONNX</li><li>Protobuf</li><li>PyTorch</li>
+                                </ul>
+                                <ul class="bullets">
+                                    <li>Built a C++ tensor inference engine from scratch that runs MobileNetV2 with no ML framework at runtime.</li>
+                                    <li>Sped up MobileNetV2 inference <strong>11.4x</strong> (<strong>467</strong> to <strong>41 ms</strong>, same -O3 build) by replacing naive Conv2D with im2col/GEMM.</li>
+                                    <li>Matched PyTorch's top-1 on <strong>50/50</strong> ImageNet images with <strong>2.6e-5</strong> max output error.</li>
+                                </ul>
+                                <div class="project-links">
+                                    <button type="button" class="btn btn-small btn-ghost project-open needs-js">Architecture &amp; details<span class="visually-hidden"> for Lyra</span></button>
+                                </div>
+                            </div>
+                            <div class="project-detail">
+                                <h4 class="label">Architecture</h4>
+                                <figure class="diagram" tabindex="0" aria-label="Lyra architecture diagram, scrollable">
+                                    <svg class="dg" viewBox="0 0 760 110" width="760" height="110" role="img" aria-label="Lyra flow. An ONNX MobileNetV2 model is loaded by the C++17 engine, which runs Conv2D as im2col/GEMM, producing top-1 output that matched PyTorch on 50/50 ImageNet images.">
+                                        <rect class="dg-box" x="20" y="22" width="210" height="64" rx="10"/>
+                                        <text class="dg-t" x="125" y="48" text-anchor="middle">ONNX model</text>
+                                        <text class="dg-s" x="125" y="70" text-anchor="middle">MobileNetV2</text>
+                                        <path class="dg-line" d="M230 54 H 267"/>
+                                        <polygon class="dg-head" points="275,54 266,49 266,59"/>
+                                        <rect class="dg-box dg-accent" x="275" y="22" width="210" height="64" rx="10"/>
+                                        <text class="dg-t" x="380" y="48" text-anchor="middle">C++17 engine</text>
+                                        <text class="dg-s" x="380" y="70" text-anchor="middle">im2col/GEMM Conv2D</text>
+                                        <path class="dg-line" d="M485 54 H 522"/>
+                                        <polygon class="dg-head" points="530,54 521,49 521,59"/>
+                                        <rect class="dg-box" x="530" y="22" width="210" height="64" rx="10"/>
+                                        <text class="dg-t" x="635" y="48" text-anchor="middle">Top-1 output</text>
+                                        <text class="dg-s" x="635" y="70" text-anchor="middle">matches PyTorch 50/50</text>
+                                    </svg>
+                                </figure>
+                            </div>
                         </div>
                     </article>
 
                     <!-- 4. Vigil -->
-                    <article class="card project reveal">
-                        <div class="project-visual" role="img" aria-label="Vigil: illustration of a monitoring pulse line">
-                            <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="5" y="9" width="38" height="28" rx="4" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M10 25h7l3-8 5 14 3-6h10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 43h12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
-                            <span class="project-visual-name">Vigil</span>
-                        </div>
-                        <div class="project-body">
-                            <h3 class="card-title">Vigil</h3>
-                            <p class="project-sub">Observability Platform</p>
-                            <ul class="chips" aria-label="Technologies">
-                                <li>TypeScript</li><li>Python</li><li>FastAPI</li><li>Docker</li><li>Fly.io</li><li>GitHub Actions</li>
-                            </ul>
-                            <ul class="bullets">
-                                <li>Built a TypeScript SDK and Python time-series store benchmarked at <strong>60,000</strong> points/s on synthetic data.</li>
-                                <li>Deployed on Fly.io with Docker and CI, monitoring <strong>3</strong> production client sites every <strong>5 min</strong> with Discord alerts.</li>
-                                <li>Co-built z-score, EWMA, and up/down outage detection (<strong>92-94%</strong> precision, synthetic backtest) behind <strong>200+</strong> tests.</li>
-                            </ul>
+                    <article class="project reveal" id="project-vigil" data-key="vigil" data-cats="systems fullstack" aria-labelledby="pt-vigil">
+                        <div class="project-card">
+                            <div class="project-visual" role="img" aria-label="Vigil: illustration of a monitoring pulse line">
+                                <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="5" y="9" width="38" height="28" rx="4" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M10 25h7l3-8 5 14 3-6h10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 43h12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+                                <span class="project-visual-name">Vigil</span>
+                            </div>
+                            <div class="project-body">
+                                <h3 class="card-title" id="pt-vigil">Vigil</h3>
+                                <p class="project-sub">Observability Platform</p>
+                                <ul class="chips" aria-label="Technologies">
+                                    <li>TypeScript</li><li>Python</li><li>FastAPI</li><li>Docker</li><li>Fly.io</li><li>GitHub Actions</li>
+                                </ul>
+                                <ul class="bullets">
+                                    <li>Built a TypeScript SDK and Python time-series store benchmarked at <strong>60,000</strong> points/s on synthetic data.</li>
+                                    <li>Deployed on Fly.io with Docker and CI, monitoring <strong>3</strong> production client sites every <strong>5 min</strong> with Discord alerts.</li>
+                                    <li>Co-built z-score, EWMA, and up/down outage detection (<strong>92-94%</strong> precision, synthetic backtest) behind <strong>200+</strong> tests.</li>
+                                </ul>
+                                <div class="project-links">
+                                    <button type="button" class="btn btn-small btn-ghost project-open needs-js">Architecture &amp; details<span class="visually-hidden"> for Vigil</span></button>
+                                </div>
+                            </div>
+                            <div class="project-detail">
+                                <h4 class="label">Architecture</h4>
+                                <figure class="diagram" tabindex="0" aria-label="Vigil architecture diagram, scrollable">
+                                    <svg class="dg" viewBox="0 0 760 110" width="760" height="110" role="img" aria-label="Vigil flow. A TypeScript SDK sends data to a Python time-series store benchmarked at 60,000 points per second, which feeds z-score, EWMA and up/down outage detection with Discord alerts.">
+                                        <rect class="dg-box" x="20" y="22" width="210" height="64" rx="10"/>
+                                        <text class="dg-t" x="125" y="59" text-anchor="middle">TypeScript SDK</text>
+                                        <path class="dg-line" d="M230 54 H 267"/>
+                                        <polygon class="dg-head" points="275,54 266,49 266,59"/>
+                                        <rect class="dg-box dg-accent" x="275" y="22" width="210" height="64" rx="10"/>
+                                        <text class="dg-t" x="380" y="48" text-anchor="middle">Time-series store</text>
+                                        <text class="dg-s" x="380" y="70" text-anchor="middle">Python · 60,000 points/s</text>
+                                        <path class="dg-line" d="M485 54 H 522"/>
+                                        <polygon class="dg-head" points="530,54 521,49 521,59"/>
+                                        <rect class="dg-box" x="530" y="22" width="210" height="64" rx="10"/>
+                                        <text class="dg-t" x="635" y="48" text-anchor="middle">Outage detection</text>
+                                        <text class="dg-s" x="635" y="70" text-anchor="middle">z-score · EWMA · Discord</text>
+                                    </svg>
+                                </figure>
+                            </div>
                         </div>
                     </article>
 
                     <!-- 5. SyncScript -->
-                    <article class="card project reveal">
-                        <div class="project-visual" role="img" aria-label="SyncScript: illustration of code brackets with sync arrows">
-                            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M16 14l-9 10 9 10M32 14l9 10-9 10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 20a6 6 0 0 1 10 1M28 28a6 6 0 0 1-10-1" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M30 17v4h-4M18 31v-4h4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                            <span class="project-visual-name">SyncScript</span>
-                        </div>
-                        <div class="project-body">
-                            <h3 class="card-title">SyncScript</h3>
-                            <p class="project-sub">Real-Time Collaborative Code Editor</p>
-                            <ul class="chips" aria-label="Technologies">
-                                <li>Yjs</li><li>CRDT</li><li>WebSocket</li><li>Node.js</li><li>React</li><li>IndexedDB</li>
-                            </ul>
-                            <ul class="bullets">
-                                <li>Built a real-time collaborative text editor syncing <strong>7+</strong> active users via Yjs CRDTs over a custom Websocket relay.</li>
-                                <li>Engineered offline-first sync using IndexedDB and Yjs state-vector diffing, sending only missing deltas.</li>
-                                <li>Deployed backend on Render and frontend on Vercel, with cold start detection for Render's <strong>30-50s</strong> wake.</li>
-                            </ul>
+                    <article class="project reveal" id="project-syncscript" data-key="syncscript" data-cats="fullstack systems" aria-labelledby="pt-syncscript">
+                        <div class="project-card">
+                            <div class="project-visual" role="img" aria-label="SyncScript: illustration of code brackets with sync arrows">
+                                <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M16 14l-9 10 9 10M32 14l9 10-9 10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 20a6 6 0 0 1 10 1M28 28a6 6 0 0 1-10-1" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M30 17v4h-4M18 31v-4h4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <span class="project-visual-name">SyncScript</span>
+                            </div>
+                            <div class="project-body">
+                                <h3 class="card-title" id="pt-syncscript">SyncScript</h3>
+                                <p class="project-sub">Real-Time Collaborative Code Editor</p>
+                                <ul class="chips" aria-label="Technologies">
+                                    <li>Yjs</li><li>CRDT</li><li>WebSocket</li><li>Node.js</li><li>React</li><li>IndexedDB</li>
+                                </ul>
+                                <ul class="bullets">
+                                    <li>Built a real-time collaborative text editor syncing <strong>7+</strong> active users via Yjs CRDTs over a custom Websocket relay.</li>
+                                    <li>Engineered offline-first sync using IndexedDB and Yjs state-vector diffing, sending only missing deltas.</li>
+                                    <li>Deployed backend on Render and frontend on Vercel, with cold start detection for Render's <strong>30-50s</strong> wake.</li>
+                                </ul>
+                                <div class="project-links">
+                                    <button type="button" class="btn btn-small btn-ghost project-open needs-js">Architecture &amp; details<span class="visually-hidden"> for SyncScript</span></button>
+                                </div>
+                            </div>
+                            <div class="project-detail">
+                                <h4 class="label">Architecture</h4>
+                                <figure class="diagram" tabindex="0" aria-label="SyncScript architecture diagram, scrollable">
+                                    <svg class="dg" viewBox="0 0 760 110" width="760" height="110" role="img" aria-label="SyncScript flow. A React and Yjs client on Vercel with IndexedDB offline storage syncs through a custom WebSocket relay running Node.js on Render to 7+ active users.">
+                                        <rect class="dg-box" x="20" y="22" width="210" height="64" rx="10"/>
+                                        <text class="dg-t" x="125" y="48" text-anchor="middle">React + Yjs client</text>
+                                        <text class="dg-s" x="125" y="70" text-anchor="middle">Vercel · IndexedDB</text>
+                                        <path class="dg-line" d="M230 54 H 267"/>
+                                        <polygon class="dg-head" points="275,54 266,49 266,59"/>
+                                        <path class="dg-line" d="M275 54 H 238"/>
+                                        <polygon class="dg-head" points="230,54 239,49 239,59"/>
+                                        <rect class="dg-box dg-accent" x="275" y="22" width="210" height="64" rx="10"/>
+                                        <text class="dg-t" x="380" y="48" text-anchor="middle">WebSocket relay</text>
+                                        <text class="dg-s" x="380" y="70" text-anchor="middle">Node.js · Render</text>
+                                        <path class="dg-line" d="M485 54 H 522"/>
+                                        <polygon class="dg-head" points="530,54 521,49 521,59"/>
+                                        <path class="dg-line" d="M530 54 H 493"/>
+                                        <polygon class="dg-head" points="485,54 494,49 494,59"/>
+                                        <rect class="dg-box" x="530" y="22" width="210" height="64" rx="10"/>
+                                        <text class="dg-t" x="635" y="48" text-anchor="middle">Collaborators</text>
+                                        <text class="dg-s" x="635" y="70" text-anchor="middle">7+ active users</text>
+                                    </svg>
+                                </figure>
+                            </div>
                         </div>
                     </article>
                 </div>
@@ -306,7 +532,7 @@
         </section>
 
         <!-- Skills -->
-        <section id="skills" class="section section-alt" aria-labelledby="skills-title">
+        <section id="skills" class="section section-alt" aria-labelledby="skills-title" tabindex="-1">
             <div class="container">
                 <h2 id="skills-title" class="section-title reveal"><span class="section-kicker">04</span>Skills</h2>
                 <div class="skills-grid">
@@ -337,7 +563,7 @@
         </section>
 
         <!-- Education -->
-        <section id="education" class="section" aria-labelledby="education-title">
+        <section id="education" class="section" aria-labelledby="education-title" tabindex="-1">
             <div class="container">
                 <h2 id="education-title" class="section-title reveal"><span class="section-kicker">05</span>Education</h2>
                 <article class="card education-card reveal">
@@ -373,7 +599,7 @@
         </section>
 
         <!-- Leadership -->
-        <section id="leadership" class="section section-alt" aria-labelledby="leadership-title">
+        <section id="leadership" class="section section-alt" aria-labelledby="leadership-title" tabindex="-1">
             <div class="container">
                 <h2 id="leadership-title" class="section-title reveal"><span class="section-kicker">06</span>Leadership &amp; Activities</h2>
                 <div class="leadership-grid">
@@ -415,7 +641,7 @@
         </section>
 
         <!-- Contact -->
-        <section id="contact" class="section" aria-labelledby="contact-title">
+        <section id="contact" class="section" aria-labelledby="contact-title" tabindex="-1">
             <div class="container">
                 <div class="contact card reveal">
                     <h2 id="contact-title" class="section-title"><span class="section-kicker">07</span>Get in touch</h2>
@@ -432,16 +658,43 @@
 
     <footer class="site-footer">
         <div class="container footer-inner">
-            <p>© <span id="year">2026</span> Barnabas James Gyampoh</p>
+            <div class="footer-mail">
+                <a href="mailto:james.b.gyampoh@gmail.com" class="footer-email">james.b.gyampoh@gmail.com</a>
+                <button type="button" class="btn btn-small btn-ghost copy-email needs-js" data-copy="james.b.gyampoh@gmail.com">Copy email</button>
+            </div>
             <ul class="footer-links">
-                <li><a href="mailto:james.b.gyampoh@gmail.com">Email</a></li>
-                <li><a href="https://www.linkedin.com/in/james-gyampoh-39849b2b1/" target="_blank" rel="noopener">LinkedIn</a></li>
                 <li><a href="https://github.com/Bjay4910" target="_blank" rel="noopener">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/james-gyampoh-39849b2b1/" target="_blank" rel="noopener">LinkedIn</a></li>
                 <li><a href="#home">Back to top</a></li>
             </ul>
+            <p class="copyright">© <span id="year">2026</span> Barnabas James Gyampoh</p>
         </div>
     </footer>
 
-    <script src="js/main.js" defer></script>
+    <!-- Project detail dialog (filled by JS from the card) -->
+    <dialog class="modal project-dialog" id="projectDialog" aria-modal="true" aria-labelledby="pdTitle">
+        <div class="modal-inner">
+            <button type="button" class="icon-btn modal-close" data-close aria-label="Close project details">
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+            <h2 class="pd-title" id="pdTitle"></h2>
+            <div class="pd-body" id="pdBody"></div>
+        </div>
+    </dialog>
+
+    <!-- Command palette -->
+    <dialog class="modal palette" id="palette" aria-modal="true" aria-label="Command palette">
+        <div class="palette-inner">
+            <div class="palette-search">
+                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 16l4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                <input type="text" id="paletteInput" class="palette-input" role="combobox" aria-expanded="true" aria-controls="paletteList" aria-autocomplete="list" aria-label="Search sections, projects and links" autocomplete="off" spellcheck="false">
+                <kbd class="kbd-hint">Esc</kbd>
+            </div>
+            <ul class="palette-list" id="paletteList" role="listbox" aria-label="Results"></ul>
+            <p class="palette-foot" aria-hidden="true"><kbd>↑</kbd><kbd>↓</kbd> to move · <kbd>Enter</kbd> to open · <kbd>Esc</kbd> to close</p>
+        </div>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
 </body>
 </html>
