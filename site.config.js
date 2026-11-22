@@ -13,13 +13,13 @@ window.SITE_CONFIG = {
         memoryHub: "",
         vigil: "",
         lyra: "",
-        syncscript: ""
+        syncscript: "https://syncscript-delta.vercel.app"
     },
     repos: {
         powerManager: "https://github.com/Bjay4910/agent-aware-power-manager",
         memoryHub: "https://github.com/Bjay4910/multi-agent-memory-hub",
-        lyra: "",
-        vigil: "",
-        syncscript: ""
+        lyra: "https://github.com/Bjay4910/lyra",
+        vigil: "https://github.com/Bjay4910/vigil",
+        syncscript: "https://github.com/Bjay4910/syncscript"
     }
 };

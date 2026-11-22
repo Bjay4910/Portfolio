@@ -339,7 +339,7 @@
         if (repo && !$('a[href="' + repo + '"]', linksBox)) {
             var g = d.createElement('a');
             g.className = 'btn btn-small';
-            g.href = repo; g.target = '_blank'; g.rel = 'noopener';
+            g.href = repo; g.target = '_blank'; g.rel = 'noopener noreferrer';
             g.innerHTML = 'GitHub<span class="visually-hidden"> repository for ' + title + '</span>';
             linksBox.insertBefore(g, openBtn);
         }
@@ -347,7 +347,7 @@
         if (demo) {
             var a = d.createElement('a');
             a.className = 'btn btn-small btn-primary';
-            a.href = demo; a.target = '_blank'; a.rel = 'noopener';
+            a.href = demo; a.target = '_blank'; a.rel = 'noopener noreferrer';
             a.innerHTML = 'Watch demo<span class="visually-hidden"> of ' + title + '</span>';
             linksBox.insertBefore(a, linksBox.firstChild);
         }
@@ -434,7 +434,7 @@
             p.textContent = 'A demo is available for this project.';
             var a = d.createElement('a');
             a.className = 'btn btn-small btn-primary';
-            a.href = demo; a.target = '_blank'; a.rel = 'noopener';
+            a.href = demo; a.target = '_blank'; a.rel = 'noopener noreferrer';
             a.textContent = 'Watch demo';
             slot.appendChild(p); slot.appendChild(a);
         } else {
@@ -511,7 +511,7 @@
     var isMac = /Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent);
     if (kbdHint && isMac) kbdHint.textContent = '⌘ K';
 
-    function openUrl(u) { window.open(u, '_blank', 'noopener'); }
+    function openUrl(u) { window.open(u, '_blank', 'noopener,noreferrer'); }
     function goSection(id) {
         var el = d.getElementById(id);
         if (!el) return;
@@ -531,6 +531,20 @@
     });
     cards.forEach(function (c) {
         items.push({ label: $('.card-title', c).textContent, group: 'Project', kw: $('.project-sub', c).textContent + ' ' + c.getAttribute('data-cats'), run: function () { openProject(c, true); } });
+    });
+    cards.forEach(function (c) {
+        var t = $('.card-title', c).textContent;
+        $$('.project-links a[href^="https://"]', c).forEach(function (a) {
+            var isRepo = /github\.com/.test(a.href);
+            items.push({ label: t + (isRepo ? ' (GitHub)' : ' (live demo)'), group: 'Link', kw: 'project ' + (isRepo ? 'repository source code github' : 'demo app'), run: function () { openUrl(a.href); } });
+        });
+    });
+    $$('.also-built .mini').forEach(function (m) {
+        var t = $('.mini-title', m).textContent;
+        $$('.mini-links a', m).forEach(function (a) {
+            var isRepo = /github\.com/.test(a.href);
+            items.push({ label: t + (isRepo ? ' (GitHub)' : ' (live demo)'), group: 'Link', kw: 'also built project ' + (isRepo ? 'repository source code github' : 'demo app'), run: function () { openUrl(a.href); } });
+        });
     });
     items.push(
         { label: 'GitHub profile', group: 'Link', kw: 'code repositories source', run: function () { openUrl(GITHUB); } },

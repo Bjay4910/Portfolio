@@ -698,7 +698,7 @@ html:not(.js) .scroll-progress { display: none; }
 .mini p { color: var(--muted); font-size: var(--fs-sm); }
 .mini .mini-stack { font-family: var(--mono); color: var(--accent); margin-top: auto; }
 .mini-links { display: flex; gap: var(--s-4); }
-.mini-links a, .footer-links a, .footer-email {
+.mini-links a, .footer-links a, .footer-email, .selected-work a {
     color: var(--text);
     font-weight: 600;
     text-decoration: underline;
@@ -706,7 +706,7 @@ html:not(.js) .scroll-progress { display: none; }
     text-underline-offset: 3px;
     transition: color .2s ease, text-decoration-color .2s ease;
 }
-.mini-links a:hover, .footer-links a:hover, .footer-email:hover { color: var(--accent); text-decoration-color: var(--accent); }
+.mini-links a:hover, .footer-links a:hover, .footer-email:hover, .selected-work a:hover { color: var(--accent); text-decoration-color: var(--accent); }
 
 /* ---------- Skills ---------- */
 .skills-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-5); }
