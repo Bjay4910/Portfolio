@@ -2,8 +2,10 @@
  * Site configuration (plain script, no build step).
  *
  * demos: paste a public demo URL (video or live app, must start with https://)
- *        to show a "Watch demo" button on that project's card and in its detail
+ *        to show a demo button on that project's card and in its detail
  *        dialog. Leave "" to hide the button.
+ * demoLabels: button text per project. Defaults to "Watch demo" (for videos);
+ *        set "Live demo" for a running app.
  * repos: repository URLs. A GitHub button is added to a card only when the URL
  *        is non-empty and the card does not already link to it.
  */
@@ -14,6 +16,9 @@ window.SITE_CONFIG = {
         vigil: "",
         lyra: "",
         syncscript: "https://syncscript-delta.vercel.app"
+    },
+    demoLabels: {
+        syncscript: "Live demo"
     },
     repos: {
         powerManager: "https://github.com/Bjay4910/agent-aware-power-manager",

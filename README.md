@@ -32,7 +32,8 @@ window.SITE_CONFIG = {
 };
 ```
 
-- Put an `https://` URL in `demos.<project>` to show a **Watch demo** button on that card and in its detail dialog. Empty strings hide the button.
+- Put an `https://` URL in `demos.<project>` to show a demo button on that card and in its detail dialog. Empty strings hide the button.
+- `demoLabels.<project>` sets the button text: it defaults to **Watch demo** (videos); SyncScript uses **Live demo** because it links to the running app.
 - Put an `https://` URL in `repos.<project>` to add a **GitHub** button to a card that does not already have one.
 - Project dialogs are linkable: `#project-power-manager`, `#project-memory-hub`, `#project-lyra`, `#project-vigil`, `#project-syncscript`.
 

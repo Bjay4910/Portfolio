@@ -330,6 +330,10 @@
     var grid = $('#projectsGrid');
     var cards = grid ? $$('.project', grid) : [];
 
+    function demoLabel(key) {
+        var l = (cfg.demoLabels || {})[key];
+        return typeof l === 'string' && l.trim() ? l.trim() : 'Watch demo';
+    }
     cards.forEach(function (card) {
         var key = card.getAttribute('data-key');
         var linksBox = $('.project-links', card);
@@ -348,7 +352,8 @@
             var a = d.createElement('a');
             a.className = 'btn btn-small btn-primary';
             a.href = demo; a.target = '_blank'; a.rel = 'noopener noreferrer';
-            a.innerHTML = 'Watch demo<span class="visually-hidden"> of ' + title + '</span>';
+            a.setAttribute('data-label', demoLabel(key));
+            a.innerHTML = demoLabel(key) + '<span class="visually-hidden"> of ' + title + '</span>';
             linksBox.insertBefore(a, linksBox.firstChild);
         }
     });
@@ -435,7 +440,7 @@
             var a = d.createElement('a');
             a.className = 'btn btn-small btn-primary';
             a.href = demo; a.target = '_blank'; a.rel = 'noopener noreferrer';
-            a.textContent = 'Watch demo';
+            a.textContent = demoLabel(card.getAttribute('data-key'));
             slot.appendChild(p); slot.appendChild(a);
         } else {
             var q = d.createElement('p');
@@ -536,7 +541,7 @@
         var t = $('.card-title', c).textContent;
         $$('.project-links a[href^="https://"]', c).forEach(function (a) {
             var isRepo = /github\.com/.test(a.href);
-            items.push({ label: t + (isRepo ? ' (GitHub)' : ' (live demo)'), group: 'Link', kw: 'project ' + (isRepo ? 'repository source code github' : 'demo app'), run: function () { openUrl(a.href); } });
+            items.push({ label: t + (isRepo ? ' (GitHub)' : ' (' + (a.getAttribute('data-label') || 'Live demo').toLowerCase() + ')'), group: 'Link', kw: 'project ' + (isRepo ? 'repository source code github' : 'demo app'), run: function () { openUrl(a.href); } });
         });
     });
     $$('.also-built .mini').forEach(function (m) {
