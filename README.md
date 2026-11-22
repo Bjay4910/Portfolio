@@ -11,7 +11,7 @@ Live: [https://bjay4910.github.io/Portfolio/](https://bjay4910.github.io/Portfol
 - Hero: a 3D node network drawn with Canvas 2D and a manual perspective projection (`js/hero.js`, no library). It loads only on desktop (>= 768px wide, fine pointer, no reduced-motion preference) and pauses when the tab is hidden or the hero is off-screen.
 - Dark theme by default, light theme via `prefers-color-scheme` or the toggle (saved in `localStorage`). Command palette: Ctrl/Cmd + K.
 - Works with JavaScript disabled: all content is in the HTML; scripts only enhance.
-- Deployed to GitHub Pages by `.github/workflows/deploy.yml` (pushes the repo root to `gh-pages` on every push to `main`).
+- Deployed to GitHub Pages from the `main` branch by GitHub's built-in `pages-build-deployment` workflow (no workflow file in this repo).
 
 ## Structure
 
